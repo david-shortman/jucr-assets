@@ -1,0 +1,24 @@
+/* JUCR Map Widget styles — scoped under .jucr-map-widget */
+.jucr-map-widget { width: 100%; border: 1px solid #ccc; border-radius: 6px; overflow: hidden;
+  font-family: Georgia, 'Times New Roman', serif; }
+.jucr-map-widget .jucr-map-canvas { position: absolute; inset: 0; }
+
+.jucr-map-widget .jucr-map-panel {
+  position: absolute; top: 10px; right: 10px; z-index: 5; width: 215px;
+  background: #f3f3f3; border: 1px solid #bbb; border-radius: 5px;
+  box-shadow: 0 1px 6px rgba(0,0,0,.3); font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  max-height: calc(100% - 20px); overflow-y: auto;
+}
+.jucr-map-widget .jucr-map-panel h4 { margin: 0; padding: 8px 10px; font-size: 13px;
+  background: #e2e2e2; border-bottom: 1px solid #ccc; }
+.jucr-map-widget .jucr-layers { padding: 7px 10px; }
+.jucr-map-widget .jucr-layers label { display: flex; align-items: center; gap: 7px;
+  padding: 3px 0; cursor: pointer; line-height: 1.2; }
+.jucr-map-widget .jucr-swatch { width: 13px; height: 13px; border-radius: 3px; flex: none; }
+.jucr-map-widget .jucr-note { padding: 7px 10px; border-top: 1px solid #ccc;
+  color: #555; font-size: 12px; }
+
+.jucr-popup h3 { margin: 0 0 4px; font-size: 15px; color: #7a3b2e; font-family: Georgia, serif; }
+.jucr-popup p { margin: 0 0 6px; font-size: 13px; line-height: 1.45; font-family: Georgia, serif; }
+.jucr-popup img { max-width: 100%; height: auto; margin-top: 4px; border-radius: 3px; }
+.jucr-popup a { color: #7a3b2e; }

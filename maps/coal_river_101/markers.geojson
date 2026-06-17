@@ -1,0 +1,110 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.53746796,
+     37.87110138
+    ]
+   },
+   "properties": {
+    "id": 7,
+    "title": "Hazy and Shumates area",
+    "body_md": "Legendary Hazy Creek is surrounded by strip mines, and Shumate Branch has been buried beneath more than two billion gallons of toxic coal sludge.",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=hazy&article=primary",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.50296021,
+     37.94031143
+    ]
+   },
+   "properties": {
+    "id": 4,
+    "title": "Changes in Marfork Hollow",
+    "body_md": "Listen to Charles Ballard explain how MTR has devastated the land, communities and heritage and how the lives of Coal River residents have been irreparably altered.",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=coal_river_101&article=9#changes_in_marfork",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.3260498,
+     37.95599365
+    ]
+   },
+   "properties": {
+    "id": 5,
+    "title": "Native American Land Use on Paint Mountain",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=coal_river_101&article=primary#Native_American_Coal_River",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.57196808,
+     37.90022659
+    ]
+   },
+   "properties": {
+    "id": 6,
+    "title": "Traditional and Present Land Use on Cherry Pond Mountain",
+    "body_md": "This link presently points to the page on Coal River Mountain, but that is not Cherry Pond Mountain.  **FIX THIS.**",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=crm&article=primary",
+    "link_to_full": true,
+    "approved": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.42948914,
+     37.88844299
+    ]
+   },
+   "properties": {
+    "id": 9,
+    "title": "Site of airplane crash",
+    "body_md": "A small, prop-driven military airplane crash landed here in the mid-1960s.  According to local knowledge, one of two people survived the crash.  Unfortunately, she was unable to survive long enough for search parties to find her.",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=crm&article=4#plane_crash",
+    "link_to_full": true,
+    "approved": true
+   }
+  }
+ ]
+}

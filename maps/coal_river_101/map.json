@@ -1,0 +1,27 @@
+{
+  "slug": "coal_river_101",
+  "center_title": "Coal River Watershed, W.Va.",
+  "center": [
+    -81.546822,
+    37.92378
+  ],
+  "zoom": 11,
+  "markers": "markers.geojson",
+  "marker_count": 5,
+  "layers": [
+    {
+      "id": "cemeteries",
+      "label": "cemeteries",
+      "file": "layers/cemeteries.geojson",
+      "features": 234,
+      "source_kml": "kml/watershed/cemeteries.kmz"
+    },
+    {
+      "id": "watersheds",
+      "label": "watersheds",
+      "file": "layers/watersheds.geojson",
+      "features": 20,
+      "source_kml": "kml/watershed/watersheds.kmz"
+    }
+  ]
+}

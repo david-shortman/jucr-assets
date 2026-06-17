@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JUCR Map</title>
+  <link rel="stylesheet" href="jucr-map.css" />
+  <style>
+    html, body { margin: 0; height: 100%; }
+    #map-host { width: 100%; height: 100vh; }
+    .jucr-map-widget { border: none !important; border-radius: 0 !important; height: 100% !important; }
+  </style>
+</head>
+<body>
+  <div id="map-host"></div>
+  <script>
+    // ?theme=coal_river_101 (default). Builds the widget container for the hosted data.
+    var theme = (new URLSearchParams(location.search).get('theme') || 'coal_river_101')
+      .replace(/[^a-z0-9_]/gi, '');
+    var d = document.createElement('div');
+    d.setAttribute('data-jucr-map', 'maps/' + theme + '/');
+    d.setAttribute('data-height', '100vh');
+    document.getElementById('map-host').appendChild(d);
+  </script>
+  <script src="jucr-map.js" defer></script>
+</body>
+</html>

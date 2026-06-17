@@ -1,0 +1,152 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.5330658,
+     37.8854332
+    ]
+   },
+   "properties": {
+    "id": 1,
+    "title": "History of coal mining in Hazy and Edwight",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=hazy&article=primary#mouth_of_hazy",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.536026,
+     37.88397598
+    ]
+   },
+   "properties": {
+    "id": 2,
+    "title": "Meet the Bradfords",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=hazy&article=6#people_and_community",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.51959229,
+     37.87205124
+    ]
+   },
+   "properties": {
+    "id": 3,
+    "title": "Pro-mountain protestors stop work on slurry dam",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://climategroundzero.org/2009/03/video-five-more-arrested-protesting-massey-energy-mountaintop-removal-blasting-near-sludge-dam-above-marsh-fork-elementary/",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.52800751,
+     37.85807037
+    ]
+   },
+   "properties": {
+    "id": 4,
+    "title": "Photos from before mountaintop removal",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=hazy&article=primary#hazy_photos",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.50006104,
+     37.85480118
+    ]
+   },
+   "properties": {
+    "id": 5,
+    "title": "Pro-mountain activists hang banner in protest",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://climategroundzero.org/2009/04/activists-hang-epa-stop-mtr-banner-on-massey-mine-arrested/",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.52888489,
+     37.84358597
+    ]
+   },
+   "properties": {
+    "id": 6,
+    "title": "Hazy Creek Hollow",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=hazy&article=4#mouth_of_hazy",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.52638245,
+     37.87805939
+    ]
+   },
+   "properties": {
+    "id": 7,
+    "title": "Marsh Fork Elementary School",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=hazy&article=3",
+    "link_to_full": true,
+    "approved": true
+   }
+  }
+ ]
+}

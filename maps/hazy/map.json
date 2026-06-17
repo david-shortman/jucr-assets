@@ -1,0 +1,69 @@
+{
+  "slug": "hazy",
+  "center_title": "Hazy and Edwight",
+  "center": [
+    -81.514292,
+    37.859581
+  ],
+  "zoom": 13,
+  "markers": "markers.geojson",
+  "marker_count": 7,
+  "layers": [
+    {
+      "id": "marshfork",
+      "label": "marshfork",
+      "file": "layers/marshfork.geojson",
+      "features": 1,
+      "source_kml": "kml/hazy/marsh_fork_elem.kmz"
+    },
+    {
+      "id": "cemeteries",
+      "label": "cemeteries",
+      "file": "layers/cemeteries.geojson",
+      "features": 234,
+      "source_kml": "kml/watershed/cemeteries.kmz"
+    },
+    {
+      "id": "blasting-zones",
+      "label": "blasting_zones",
+      "file": "layers/blasting-zones.geojson",
+      "features": 2,
+      "source_kml": "kml/hazy/BlastingZones.kml"
+    },
+    {
+      "id": "structures",
+      "label": "structures",
+      "file": "layers/structures.geojson",
+      "features": 721,
+      "source_kml": "kml/hazy/Structures.kml"
+    },
+    {
+      "id": "edwight-mining",
+      "label": "edwight_mining",
+      "file": "layers/edwight-mining.geojson",
+      "features": 12,
+      "source_kml": "kml/hazy/SurfaceMining.kml"
+    },
+    {
+      "id": "edwight-fills",
+      "label": "edwight_fills",
+      "file": "layers/edwight-fills.geojson",
+      "features": 2,
+      "source_kml": "kml/hazy/ValleyFills.kml"
+    },
+    {
+      "id": "shumate",
+      "label": "shumate",
+      "file": "layers/shumate.geojson",
+      "features": 1,
+      "source_kml": "kml/hazy/shumate.kmz"
+    },
+    {
+      "id": "streams",
+      "label": "streams",
+      "file": "layers/streams.geojson",
+      "features": 151,
+      "source_kml": "kml/hazy/hazy_streams.kmz"
+    }
+  ]
+}

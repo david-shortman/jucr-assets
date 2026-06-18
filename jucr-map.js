@@ -43,8 +43,12 @@
   }
   function resolveImage(ref, mediaBase) {
     if (!ref || /failed initial if statement/i.test(ref)) return null;
+    if (mediaBase) {
+      var clean = decodeURIComponent(ref.split("?")[0].split("#")[0]);
+      var bn = clean.substring(clean.lastIndexOf("/") + 1);
+      return mediaBase.replace(/\/$/, "") + "/" + encodeURIComponent(bn);
+    }
     if (/^https?:\/\//.test(ref)) return ref;
-    if (mediaBase) return mediaBase.replace(/\/$/, "") + "/" + ref.replace(/^\//, "");
     return null;
   }
   function markerPopup(p, mediaBase) {

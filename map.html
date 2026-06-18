@@ -32,6 +32,7 @@
     document.title = (NAMES[theme] || 'Map') + ' — Journey Up Coal River';
     var d = document.createElement('div');
     d.setAttribute('data-jucr-map', 'maps/' + theme + '/');
+    d.setAttribute('data-media-base', 'media');
     d.setAttribute('data-height', '100%');
     document.getElementById('map-host').appendChild(d);
   </script>

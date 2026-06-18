@@ -8,6 +8,9 @@
   <style>
     html, body { margin: 0; height: 100%; font-family: Georgia, 'Times New Roman', serif; background:#383838; }
     #app { display: grid; grid-template-rows: auto auto 1fr; height: 100vh; max-width:1100px; margin:0 auto; background:#f5f1e8; }
+    /* embed mode (iframed inside a page that already has the banner): hide chrome */
+    body.embed #app { grid-template-rows: 1fr; max-width:none; }
+    body.embed .hdr, body.embed .bar { display:none; }
     .hdr { background:#2b2b2b center/cover no-repeat url(img/upcoalriver-header.jpg); aspect-ratio:898/200; }
     .bar { background:#cdbfa6; border-bottom:3px solid #7a3b2e; display:flex; align-items:center; justify-content:space-between; padding:8px 16px; }
     .bar a { color:#3a2a18; text-decoration:none; font-family:Arial,Helvetica,sans-serif; font-size:13px; }
@@ -27,7 +30,9 @@
       hazy:"A Community & Strip Mining", prenter:"Public Health & Coal Slurry",
       cresources:"Community Resource Mapping", mtr:"What is Mountaintop Removal?",
       wind:"Renewable Energy on Coal River Mountain", blair:"Blair Mountain" };
-    var theme = (new URLSearchParams(location.search).get('theme') || 'coal_river_101').replace(/[^a-z0-9_]/gi,'');
+    var params = new URLSearchParams(location.search);
+    if (params.get('embed') === '1') document.body.classList.add('embed');
+    var theme = (params.get('theme') || 'coal_river_101').replace(/[^a-z0-9_]/gi,'');
     document.getElementById('ttl').textContent = NAMES[theme] || 'Map';
     document.title = (NAMES[theme] || 'Map') + ' — Journey Up Coal River';
     var d = document.createElement('div');

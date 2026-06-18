@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coal River Watershed</title>
+  <style>
+    html, body { margin: 0; background: transparent; }
+    #wrap { position: relative; width: 100%; line-height: 0; }
+    #base { width: 100%; display: block; }
+    .ov { position: absolute; inset: 0; width: 100%; height: 100%;
+      opacity: 0; transition: opacity .18s ease; pointer-events: none; }
+    #svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .hot { fill: rgba(0,0,0,0); cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <img id="base" src="img/Coal_River_Watershed_website2.jpg" alt="Coal River Watershed Map" />
+    <img class="ov" id="ov-crm" src="img/watershed-crm-hover.png" alt="" />
+    <img class="ov" id="ov-hazy" src="img/watershed-hazy-hover.png" alt="" />
+    <img class="ov" id="ov-prenter" src="img/watershed-prenter-hover.png" alt="" />
+    <svg id="svg" viewBox="0 0 630 815" preserveAspectRatio="none"></svg>
+  </div>
+  <script>
+    var REGIONS = [
+      { ov:'ov-crm', theme:'crm', title:'Coal River Mountain',
+        coords:'364,461,419,445,435,464,497,462,534,523,533,599,483,597,450,591,428,567,413,550,398,543,376,538,376,537,373,513,360,501,363,478' },
+      { ov:'ov-hazy', theme:'hazy', title:'Hazy & Shumates',
+        coords:'331,536,357,536,361,553,383,558,396,569,410,574,396,612,370,615,351,605,332,594' },
+      { ov:'ov-prenter', theme:'prenter', title:'Prenter',
+        coords:'214,339,266,339,280,348,306,355,305,364,309,365,314,363,318,359,321,360,321,364,323,367,326,364,327,363,329,364,329,368,333,374,334,381,332,385,329,391,330,395,334,393,337,392,335,398,335,403,335,408,331,411,330,412,330,419,326,422,321,423,314,424,295,423,284,424,253,421,233,416,202,388,200,369' }
+    ];
+    var svg = document.getElementById('svg');
+    var SVGNS = 'http://www.w3.org/2000/svg';
+    function pairs(c){ var n=c.split(','); var out=[]; for(var i=0;i<n.length;i+=2) out.push(n[i]+','+n[i+1]); return out.join(' '); }
+    REGIONS.forEach(function(r){
+      var a = document.createElementNS(SVGNS,'a');
+      a.setAttribute('href', 'map.html?theme=' + r.theme);
+      var poly = document.createElementNS(SVGNS,'polygon');
+      poly.setAttribute('points', pairs(r.coords));
+      poly.setAttribute('class','hot');
+      var t = document.createElementNS(SVGNS,'title'); t.textContent = r.title; a.appendChild(t);
+      var ov = document.getElementById(r.ov);
+      a.addEventListener('mouseenter', function(){ ov.style.opacity = 1; });
+      a.addEventListener('mouseleave', function(){ ov.style.opacity = 0; });
+      a.appendChild(poly); svg.appendChild(a);
+    });
+  </script>
+</body>
+</html>

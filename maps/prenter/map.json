@@ -1,0 +1,52 @@
+{
+  "slug": "prenter",
+  "center_title": "Prenter, W.Va., and surrounding area",
+  "center": [
+    -81.68491,
+    38.05184
+  ],
+  "zoom": 11,
+  "markers": "markers.geojson",
+  "marker_count": 6,
+  "layers": [
+    {
+      "id": "blackcastle-mining",
+      "label": "Black Castle mining complex",
+      "file": "layers/blackcastle-mining.geojson",
+      "features": 83,
+      "source_kml": "kml/prenter/csPrenterMining.kmz",
+      "default": true
+    },
+    {
+      "id": "blackcastle-fills",
+      "label": "Black Castle valley fills",
+      "file": "layers/blackcastle-fills.geojson",
+      "features": 145,
+      "source_kml": "kml/prenter/valley_fills.kml",
+      "default": true
+    },
+    {
+      "id": "injections",
+      "label": "Coal-slurry injection wells",
+      "file": "layers/injections.geojson",
+      "features": 8,
+      "source_kml": "kml/prenter/Injection_Locations.kml",
+      "default": true
+    },
+    {
+      "id": "prenter-streams",
+      "label": "Streams",
+      "missing_source": true,
+      "source_kml": "kml/prenter/prenter_streams.kmz",
+      "default": true
+    },
+    {
+      "id": "cemeteries",
+      "label": "Cemeteries",
+      "file": "layers/cemeteries.geojson",
+      "features": 234,
+      "source_kml": "kml/watershed/cemeteries.kmz",
+      "default": true
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.62398529,
+     38.11461258
+    ]
+   },
+   "properties": {
+    "id": 1,
+    "title": "Audio: Patty Sebok",
+    "body_md": "Patty has lived in Prenter Hollow for 31 years with her husband Butch. In this interview, she talks about how she first found out about their contaminated well water, health concerns in her community, and the emergency water project for the communities of Prenter Road.",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=prenter&article=13#patty_sebok_audio",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.63821411,
+     38.08683014
+    ]
+   },
+   "properties": {
+    "id": 2,
+    "title": "Audio: Maria Lambert",
+    "body_md": "Maria Lambert is a lifelong resident of the Laurel Creek Watershed and has lived in her home in Sandlick for the past 8 years surrounded by her family members and loved ones. The water quality issues affecting her family and community have led her to speak out for clean water for her community.  Listen to an interview with Maria, and then learn about her family through the pictures that she shared with us.",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=prenter&article=13#maria_lambert_audio",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.65048981,
+     38.06744003
+    ]
+   },
+   "properties": {
+    "id": 3,
+    "title": "Video: Tap water corrodes penny",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=prenter&article=11#penny_trick",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.70826721,
+     38.03488159
+    ]
+   },
+   "properties": {
+    "id": 5,
+    "title": "Site of coal slurry injections into underground mines",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=prenter&article=11#water_quality",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.62705994,
+     38.0150528
+    ]
+   },
+   "properties": {
+    "id": 6,
+    "title": "The story of the Prenter area",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=prenter&article=primary#prenter_hollow",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.66482544,
+     38.08966827
+    ]
+   },
+   "properties": {
+    "id": 7,
+    "title": "Video: Black water filter",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=prenter&article=11#black_water_video",
+    "link_to_full": true,
+    "approved": true
+   }
+  }
+ ]
+}

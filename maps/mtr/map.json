@@ -1,0 +1,77 @@
+{
+  "slug": "mtr",
+  "center_title": "Coal River Watershed, W.Va.",
+  "center": [
+    -81.659718,
+    38.024647
+  ],
+  "zoom": 10,
+  "markers": "markers.geojson",
+  "marker_count": 7,
+  "layers": [
+    {
+      "id": "edwight-mining",
+      "label": "Edwight strip-mine permit",
+      "file": "layers/edwight-mining.geojson",
+      "features": 12,
+      "source_kml": "kml/hazy/SurfaceMining.kml",
+      "default": true
+    },
+    {
+      "id": "edwight-fills",
+      "label": "Edwight valley fills",
+      "file": "layers/edwight-fills.geojson",
+      "features": 2,
+      "source_kml": "kml/hazy/ValleyFills.kml",
+      "default": true
+    },
+    {
+      "id": "shumate",
+      "label": "Shumate slurry impoundment",
+      "file": "layers/shumate.geojson",
+      "features": 1,
+      "source_kml": "kml/hazy/shumate.kmz",
+      "default": true
+    },
+    {
+      "id": "crm-permits",
+      "label": "Surface-mine permits",
+      "file": "layers/crm-permits.geojson",
+      "features": 3,
+      "source_kml": "kml/crm/crm_permits.kmz",
+      "default": true
+    },
+    {
+      "id": "brushy",
+      "label": "Brushy Fork slurry impoundment",
+      "file": "layers/brushy.geojson",
+      "features": 1,
+      "source_kml": "kml/crm/brushy_fork.kmz",
+      "default": true
+    },
+    {
+      "id": "twilight",
+      "label": "Twilight surface-mine complex",
+      "file": "layers/twilight.geojson",
+      "features": 5,
+      "source_kml": "kml/twilight/twilight.kmz",
+      "default": true
+    },
+    {
+      "id": "blackcastle-mining",
+      "label": "Black Castle mining complex",
+      "file": "layers/blackcastle-mining.geojson",
+      "features": 83,
+      "source_kml": "kml/prenter/csPrenterMining.kmz",
+      "default": true
+    },
+    {
+      "id": "blackcastle-fills",
+      "label": "Black Castle valley fills",
+      "file": "layers/blackcastle-fills.geojson",
+      "features": 145,
+      "source_kml": "kml/prenter/valley_fills.kml",
+      "default": true
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "crm",
+  "center_title": "Coal River Mountain, W.Va.",
+  "center": [
+    -81.4310753103203,
+    37.9139502410489
+  ],
+  "zoom": 12,
+  "markers": "markers.geojson",
+  "marker_count": 7,
+  "layers": [
+    {
+      "id": "cemeteries",
+      "label": "Cemeteries",
+      "file": "layers/cemeteries.geojson",
+      "features": 234,
+      "source_kml": "kml/watershed/cemeteries.kmz",
+      "default": true
+    },
+    {
+      "id": "streams",
+      "label": "Streams",
+      "file": "layers/streams.geojson",
+      "features": 584,
+      "source_kml": "kml/crm/streams.8thick.kmz",
+      "default": true
+    },
+    {
+      "id": "crm-permits",
+      "label": "Surface-mine permits",
+      "file": "layers/crm-permits.geojson",
+      "features": 3,
+      "source_kml": "kml/crm/crm_permits.kmz",
+      "default": true
+    },
+    {
+      "id": "brushy",
+      "label": "Brushy Fork slurry impoundment",
+      "file": "layers/brushy.geojson",
+      "features": 1,
+      "source_kml": "kml/crm/brushy_fork.kmz",
+      "default": true
+    },
+    {
+      "id": "two-mile",
+      "label": "2-mile buffer around permits",
+      "file": "layers/two-mile.geojson",
+      "features": 3,
+      "source_kml": "kml/crm/2-MileBufferMine-PermitBoundaries.kml",
+      "default": true
+    },
+    {
+      "id": "marshfork",
+      "label": "Marsh Fork Elementary School",
+      "file": "layers/marshfork.geojson",
+      "features": 1,
+      "source_kml": "kml/hazy/marsh_fork_elem.kmz",
+      "default": true
+    }
+  ]
+}

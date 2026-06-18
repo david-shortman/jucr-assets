@@ -1,13 +1,13 @@
 {
-  "slug": "coal_river_101",
-  "center_title": "Coal River Watershed, W.Va.",
+  "slug": "cresources",
+  "center_title": "Marsh Fork, Coal River, W.Va.",
   "center": [
     -81.546822,
     37.92378
   ],
   "zoom": 11,
   "markers": "markers.geojson",
-  "marker_count": 5,
+  "marker_count": 34,
   "layers": [
     {
       "id": "cemeteries",
@@ -15,14 +15,6 @@
       "file": "layers/cemeteries.geojson",
       "features": 234,
       "source_kml": "kml/watershed/cemeteries.kmz",
-      "default": true
-    },
-    {
-      "id": "watersheds",
-      "label": "Watersheds (sub-basins)",
-      "file": "layers/watersheds.geojson",
-      "features": 20,
-      "source_kml": "kml/watershed/watersheds.kmz",
       "default": true
     }
   ]

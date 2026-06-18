@@ -1,0 +1,53 @@
+{
+  "slug": "blair",
+  "center_title": "Blair Mountain, W.Va.",
+  "center": [
+    -81.826,
+    37.866994
+  ],
+  "zoom": 11,
+  "markers": "markers.geojson",
+  "marker_count": 0,
+  "layers": [
+    {
+      "id": "cemeteries",
+      "label": "Cemeteries",
+      "file": "layers/cemeteries.geojson",
+      "features": 234,
+      "source_kml": "kml/watershed/cemeteries.kmz",
+      "default": false
+    },
+    {
+      "id": "blair-fills",
+      "label": "Blair Mtn valley fills",
+      "file": "layers/blair-fills.geojson",
+      "features": 243,
+      "source_kml": "kml/blair/Blair_Area_Fills.kml",
+      "default": true
+    },
+    {
+      "id": "battlefield",
+      "label": "Blair Mountain battlefield",
+      "file": "layers/battlefield.geojson",
+      "features": 2,
+      "source_kml": "kml/blair/Blair_Battle.kml",
+      "default": true
+    },
+    {
+      "id": "bio-impaired",
+      "label": "Biologically impaired streams",
+      "file": "layers/bio-impaired.geojson",
+      "features": 366,
+      "source_kml": "kml/blair/Blair_bio_impaired.kml",
+      "default": false
+    },
+    {
+      "id": "blair-streams",
+      "label": "Streams",
+      "file": "layers/blair-streams.geojson",
+      "features": 1992,
+      "source_kml": "kml/blair/Blair_streams.kml",
+      "default": false
+    }
+  ]
+}

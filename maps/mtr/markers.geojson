@@ -1,0 +1,152 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.90181732,
+     38.08987808
+    ]
+   },
+   "properties": {
+    "id": 1,
+    "title": "Hobet 21, largest strip mine in West Virginia",
+    "body_md": "Hobet, the largest strip mine complex in West Virginia, is also one of the only unionized surface mines in the state.",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://earthobservatory.nasa.gov/IOTD/view.php?id=8331",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.6841507,
+     38.05528259
+    ]
+   },
+   "properties": {
+    "id": 2,
+    "title": "Prenter Area",
+    "body_md": "Prenter and the surrounding communities' drinking water has been poisoned with what's likely coal slurry.",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=prenter&article=primary",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.55780792,
+     37.91078186
+    ]
+   },
+   "properties": {
+    "id": 3,
+    "title": "Twilight Strip Mine",
+    "body_md": "This window needs a link to info about Twilight, not just the MTR intro.",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.51325989,
+     37.85524368
+    ]
+   },
+   "properties": {
+    "id": 4,
+    "title": "Edwight Strip Mine",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=hazy&article=primary",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.42797852,
+     37.90067673
+    ]
+   },
+   "properties": {
+    "id": 5,
+    "title": "Coal River Mountain",
+    "body_md": "Massey Energy has began strip mining operations around the [Brushy Fork Sludge Impoundment](http://auroralights.org/map_project/theme.php?theme=crm&article=2) on Coal River Mountain in October 2009.  Massey intends to mine thousands of acres, but they currently have no valley fill permits. (6/24/10)",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=crm&article=primary",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.8808136,
+     37.89932251
+    ]
+   },
+   "properties": {
+    "id": 6,
+    "title": "Blair Mountain: site of historic battle",
+    "body_md": "The largest armed uprising in the U.S. since the Civil War was here in 1921.  It's the only time since the Civil War that the U.S. military fired on U.S. civilians.  An ongoing, back-and-forth [effort to protect the Blair Mountain Battlefield](http://friendsofblairmountain.org/ \"Friends of Blair Mountain\") in some way has been in attrition with the efforts of coal companies to strip Blair Mountain.",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "http://upload.wikimedia.org/wikipedia/en/d/d8/Blair_Mountain_Fighting.jpg",
+    "image_desc": "http://upload.wikimedia.org/wikipedia/en/d/d8/Blair_Mountain_Fighting.jpg",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=coal_river_101&article=7#UMWA_and_the_Coal_Wars",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.4533844,
+     37.97757339
+    ]
+   },
+   "properties": {
+    "id": 7,
+    "title": "Kayford Mountain",
+    "body_md": "Kayford Mountain, partially saved by the Stanley Heirs Land Trust, is now one of the largest strip mines in the state.",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://www.ilovemountains.org/memorial/c251/10",
+    "link_to_full": true,
+    "approved": true
+   }
+  }
+ ]
+}

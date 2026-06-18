@@ -1,0 +1,21 @@
+{
+  "slug": "wind",
+  "center_title": "Coal River Mountain, W.Va.",
+  "center": [
+    -81.423512,
+    37.903926
+  ],
+  "zoom": 12,
+  "markers": "markers.geojson",
+  "marker_count": 1,
+  "layers": [
+    {
+      "id": "proposed-turbines",
+      "label": "Proposed wind turbines",
+      "file": "layers/proposed-turbines.geojson",
+      "features": 164,
+      "source_kml": "kml/wind/turbinelocations.kml",
+      "default": true
+    }
+  ]
+}

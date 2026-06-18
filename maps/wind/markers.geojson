@@ -1,0 +1,26 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.42947388,
+     37.88882828
+    ]
+   },
+   "properties": {
+    "id": 3,
+    "title": "Common land use on Pond Knob",
+    "body_md": "Pond Knob, near Rock Creek and Dry Creek, was a popular destination for camping, four-wheeling and community meeting places because of its natural beauty.  Pond Knob also has a deep historical and cultural significance for Coal River Valley. A Native American hunting trail passed through Indian Gap on Pond Knob, and the remains of these hunting parties can be found in arrowheads and burial mounds on the mountain.",
+    "image": "http://lh5.ggpht.com/_2T7QDyM4sFI/SZhPPZCztWI/AAAAAAAAAhk/bCuSCOeW2XQ/pondknob_small%20copy.jpg",
+    "image_thumb": "",
+    "image_desc": "Pond Knob in wintertime.  ",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=crm&article=4#pond_knob",
+    "link_to_full": true,
+    "approved": true
+   }
+  }
+ ]
+}

@@ -11,59 +11,67 @@
   "layers": [
     {
       "id": "marshfork",
-      "label": "marshfork",
+      "label": "Marsh Fork Elementary School",
       "file": "layers/marshfork.geojson",
       "features": 1,
-      "source_kml": "kml/hazy/marsh_fork_elem.kmz"
+      "source_kml": "kml/hazy/marsh_fork_elem.kmz",
+      "default": true
     },
     {
       "id": "cemeteries",
-      "label": "cemeteries",
+      "label": "Cemeteries",
       "file": "layers/cemeteries.geojson",
       "features": 234,
-      "source_kml": "kml/watershed/cemeteries.kmz"
+      "source_kml": "kml/watershed/cemeteries.kmz",
+      "default": true
     },
     {
       "id": "blasting-zones",
-      "label": "blasting_zones",
+      "label": "Blasting radii (½ & 7/10 mi)",
       "file": "layers/blasting-zones.geojson",
       "features": 2,
-      "source_kml": "kml/hazy/BlastingZones.kml"
+      "source_kml": "kml/hazy/BlastingZones.kml",
+      "default": true
     },
     {
       "id": "structures",
-      "label": "structures",
+      "label": "Structures (buildings)",
       "file": "layers/structures.geojson",
       "features": 721,
-      "source_kml": "kml/hazy/Structures.kml"
+      "source_kml": "kml/hazy/Structures.kml",
+      "default": true
     },
     {
       "id": "edwight-mining",
-      "label": "edwight_mining",
+      "label": "Edwight strip-mine permit",
       "file": "layers/edwight-mining.geojson",
       "features": 12,
-      "source_kml": "kml/hazy/SurfaceMining.kml"
+      "source_kml": "kml/hazy/SurfaceMining.kml",
+      "default": true
     },
     {
       "id": "edwight-fills",
-      "label": "edwight_fills",
+      "label": "Edwight valley fills",
       "file": "layers/edwight-fills.geojson",
       "features": 2,
-      "source_kml": "kml/hazy/ValleyFills.kml"
+      "source_kml": "kml/hazy/ValleyFills.kml",
+      "default": true
     },
     {
       "id": "shumate",
-      "label": "shumate",
+      "label": "Shumate slurry impoundment",
       "file": "layers/shumate.geojson",
       "features": 1,
-      "source_kml": "kml/hazy/shumate.kmz"
+      "source_kml": "kml/hazy/shumate.kmz",
+      "default": true
     },
     {
       "id": "streams",
-      "label": "streams",
+      "label": "Streams",
       "file": "layers/streams.geojson",
       "features": 151,
-      "source_kml": "kml/hazy/hazy_streams.kmz"
+      "source_kml": "kml/hazy/hazy_streams.kmz",
+      "default": true
     }
   ]
 }

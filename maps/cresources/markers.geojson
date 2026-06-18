@@ -1,0 +1,719 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.45161438,
+     37.85329437
+    ]
+   },
+   "properties": {
+    "id": 15,
+    "title": "",
+    "body_md": "",
+    "image": "/map_project/images/resource_mapping/ed_wiley_shack.jpg",
+    "image_thumb": "http://auroralights.org/ckfinder/core/connector/php/connector.php?command=Thumbnail&type=Images&currentFolder=%2F&langCode=en&hash=78a0ca3c1c034312&FileName=ed_wiley_shack.jpg",
+    "image_desc": "Photo by Josh Graupera.",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.45140076,
+     37.85126114
+    ]
+   },
+   "properties": {
+    "id": 14,
+    "title": "",
+    "body_md": "",
+    "image": "/map_project/images/resource_mapping/spinning_wheel.jpg",
+    "image_thumb": "http://auroralights.org/ckfinder/core/connector/php/connector.php?command=Thumbnail&type=Images&currentFolder=%2F&langCode=en&hash=78a0ca3c1c034312&FileName=spinning_wheel.jpg",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.53177643,
+     37.88683319
+    ]
+   },
+   "properties": {
+    "id": 13,
+    "title": "",
+    "body_md": "",
+    "image": "/map_project/images/resource_mapping/rick_bradford_dogs.jpg",
+    "image_thumb": "http://auroralights.org/ckfinder/core/connector/php/connector.php?command=Thumbnail&type=Images&currentFolder=%2F&langCode=en&hash=78a0ca3c1c034312&FileName=rick_bradford_dogs.jpg",
+    "image_desc": "Photo by Cheshire Tongkat",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.50353241,
+     37.87709045
+    ]
+   },
+   "properties": {
+    "id": 28,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.52877045,
+     37.97573471
+    ]
+   },
+   "properties": {
+    "id": 29,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.45555878,
+     37.85284042
+    ]
+   },
+   "properties": {
+    "id": 35,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.43054199,
+     37.83230209
+    ]
+   },
+   "properties": {
+    "id": 34,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.45094299,
+     37.85046005
+    ]
+   },
+   "properties": {
+    "id": 43,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.43821716,
+     37.85655975
+    ]
+   },
+   "properties": {
+    "id": 23,
+    "title": "",
+    "body_md": "",
+    "image": "http://farm3.static.flickr.com/2790/4169446351_57ce2417fe_m.jpg",
+    "image_thumb": "",
+    "image_desc": "Delbert guides a log through his sawmill. Fall 2009, photo Maureen Farrell.",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.4552536,
+     37.85503387
+    ]
+   },
+   "properties": {
+    "id": 36,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.42971802,
+     37.83880234
+    ]
+   },
+   "properties": {
+    "id": 42,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.52868652,
+     37.97546387
+    ]
+   },
+   "properties": {
+    "id": 25,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.43014526,
+     37.83378601
+    ]
+   },
+   "properties": {
+    "id": 26,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.43003845,
+     37.83644104
+    ]
+   },
+   "properties": {
+    "id": 27,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.5127182,
+     37.96044159
+    ]
+   },
+   "properties": {
+    "id": 30,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.53317261,
+     37.97915649
+    ]
+   },
+   "properties": {
+    "id": 31,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.42726135,
+     37.83612823
+    ]
+   },
+   "properties": {
+    "id": 32,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.44726562,
+     37.85286713
+    ]
+   },
+   "properties": {
+    "id": 33,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.41933441,
+     37.95096588
+    ]
+   },
+   "properties": {
+    "id": 37,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.46362305,
+     37.86130142
+    ]
+   },
+   "properties": {
+    "id": 38,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.48422241,
+     37.86235046
+    ]
+   },
+   "properties": {
+    "id": 39,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.43427277,
+     37.83988571
+    ]
+   },
+   "properties": {
+    "id": 40,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.50447845,
+     37.87539673
+    ]
+   },
+   "properties": {
+    "id": 41,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.53417969,
+     37.96389389
+    ]
+   },
+   "properties": {
+    "id": 44,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.43830109,
+     37.83853149
+    ]
+   },
+   "properties": {
+    "id": 45,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.48203278,
+     37.87976456
+    ]
+   },
+   "properties": {
+    "id": 46,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.45057678,
+     37.91874313
+    ]
+   },
+   "properties": {
+    "id": 47,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.62837982,
+     37.8690033
+    ]
+   },
+   "properties": {
+    "id": 48,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.45715332,
+     37.8949852
+    ]
+   },
+   "properties": {
+    "id": 49,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.53302765,
+     37.91367722
+    ]
+   },
+   "properties": {
+    "id": 50,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.53852844,
+     37.91801071
+    ]
+   },
+   "properties": {
+    "id": 51,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.54229736,
+     37.93453217
+    ]
+   },
+   "properties": {
+    "id": 52,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.62267303,
+     37.92644882
+    ]
+   },
+   "properties": {
+    "id": 53,
+    "title": "",
+    "body_md": "",
+    "image": "",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.4560318,
+     37.85265732
+    ]
+   },
+   "properties": {
+    "id": 54,
+    "title": "Tadpole Project",
+    "body_md": "A first step in cleaning up the Big Coal River, starting with trash pickup along the banks of the river and its tributaries. We feel that starting the restoration of our waters with picking up the trash is a huge step in fostering the relationship of a watershed team in this area.",
+    "image": "/map_project/images/resource_mapping/Tadpole_day4.jpg",
+    "image_thumb": "http://auroralights.org/ckfinder/core/connector/php/connector.php?command=Thumbnail&type=Images&currentFolder=%2F&langCode=en&hash=78a0ca3c1c034312&FileName=Tadpole_day4.jpg",
+    "image_desc": "Blake and Jacob after a hard morning\\'s work cleaning up home base of Tadpole Project.",
+    "details_link": "/map_project/theme.php?theme=cresources&article=38",
+    "link_to_full": true,
+    "approved": true
+   }
+  }
+ ]
+}

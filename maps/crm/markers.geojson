@@ -1,0 +1,152 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.51463318,
+     37.8559227
+    ]
+   },
+   "properties": {
+    "id": 12,
+    "title": "Hazy and Shumates area",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=hazy&article=primary",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.45901489,
+     37.86595154
+    ]
+   },
+   "properties": {
+    "id": 11,
+    "title": "Timbering in Dry Creek",
+    "body_md": "Many residents are also concerned about the impacts of timbering in the headwaters of the hollows. Residents of Dry Creek have already noticed an increased in flooding in the hollow, and are concerned about water levels rising even before the start of MTR operations.",
+    "image": "http://auroralights.org/userfiles/burningtrees_small%20copy.jpg",
+    "image_thumb": "http://auroralights.org/userfiles/burningtrees_small%20copy.jpg",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=crm&article=5#dry_creek_timbering",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.42262268,
+     37.85022736
+    ]
+   },
+   "properties": {
+    "id": 10,
+    "title": "Video Interviews with Rock Creek residents",
+    "body_md": "Hear them speak about the Coal River Wind Project:\n\n[Lorelei Scarboro](http://auroralights.org/map_project/theme.php?theme=wind&article=primary#lorelei)\n\n[Sherry Geisler](http://auroralights.org/map_project/theme.php?theme=wind&article=primary#sherry)",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.42176819,
+     37.90605164
+    ]
+   },
+   "properties": {
+    "id": 8,
+    "title": "Coal River Wind Project",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=wind&article=primary#wind_intro",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.45420837,
+     37.89765549
+    ]
+   },
+   "properties": {
+    "id": 9,
+    "title": "Video Interview, Ernie Thompson",
+    "body_md": "Ernie currently lives in Horse Creek.",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=wind&article=primary#wind_videos",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.44356537,
+     37.95344162
+    ]
+   },
+   "properties": {
+    "id": 6,
+    "title": "Flooding and blasting threats in Dorothy and Colcord",
+    "body_md": "The blasting will come within a half-mile of many of these communities, and will happen daily, up to two or three times per day.  Based on information provided in the permit applications, the mining is expected to last for 17 years.",
+    "image": "http://auroralights.org/userfiles/Colcord_flood(1).jpg",
+    "image_thumb": "http://auroralights.org/userfiles/Colcord_flood(1)_thumb.jpg",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=wind&article=6#flooding_and_blasting",
+    "link_to_full": true,
+    "approved": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.53403473,
+     37.88451385
+    ]
+   },
+   "properties": {
+    "id": 13,
+    "title": "The outmigration of Edwight",
+    "body_md": "",
+    "image": "Failed initial if statement in InfoWindow.class.php",
+    "image_thumb": "",
+    "image_desc": "",
+    "details_link": "http://auroralights.org/map_project/theme.php?theme=coal_river_101&article=8#outmigration",
+    "link_to_full": true,
+    "approved": true
+   }
+  }
+ ]
+}

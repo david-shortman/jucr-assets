@@ -8,8 +8,12 @@
     html, body { margin: 0; background: transparent; }
     #wrap { position: relative; width: 100%; line-height: 0; }
     #base { width: 100%; display: block; }
-    .ov { position: absolute; inset: 0; width: 100%; height: 100%;
-      opacity: 0; transition: opacity .18s ease; pointer-events: none; }
+    /* overlays are small region crops positioned over the 630x815 base, at natural aspect */
+    .ov { position: absolute; opacity: 0; transition: opacity .18s ease; pointer-events: none; height: auto; }
+    /* left/top/width as % of the 630x815 base (from the original map_style.css) */
+    #ov-crm     { left: 54.127%; top: 54.233%; width: 27.937%; }   /* 341,442  176w */
+    #ov-hazy    { left: 53.175%; top: 65.521%; width: 11.746%; }   /* 335,534   74w */
+    #ov-prenter { left: 30.317%; top: 41.104%; width: 24.444%; }   /* 191,335  154w */
     #svg { position: absolute; inset: 0; width: 100%; height: 100%; }
     .hot { fill: rgba(0,0,0,0); cursor: pointer; }
   </style>
@@ -31,8 +35,7 @@
       { ov:'ov-prenter', theme:'prenter', title:'Prenter',
         coords:'214,339,266,339,280,348,306,355,305,364,309,365,314,363,318,359,321,360,321,364,323,367,326,364,327,363,329,364,329,368,333,374,334,381,332,385,329,391,330,395,334,393,337,392,335,398,335,403,335,408,331,411,330,412,330,419,326,422,321,423,314,424,295,423,284,424,253,421,233,416,202,388,200,369' }
     ];
-    var svg = document.getElementById('svg');
-    var SVGNS = 'http://www.w3.org/2000/svg';
+    var svg = document.getElementById('svg'), SVGNS = 'http://www.w3.org/2000/svg';
     function pairs(c){ var n=c.split(','); var out=[]; for(var i=0;i<n.length;i+=2) out.push(n[i]+','+n[i+1]); return out.join(' '); }
     REGIONS.forEach(function(r){
       var a = document.createElementNS(SVGNS,'a');

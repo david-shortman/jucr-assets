@@ -69,27 +69,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -81.57196808,
-     37.90022659
-    ]
-   },
-   "properties": {
-    "id": 6,
-    "title": "Traditional and Present Land Use on Cherry Pond Mountain",
-    "body_md": "This link presently points to the page on Coal River Mountain, but that is not Cherry Pond Mountain.  **FIX THIS.**",
-    "image": "",
-    "image_thumb": "",
-    "image_desc": "",
-    "details_link": "http://auroralights.org/map_project/theme.php?theme=crm&article=primary",
-    "link_to_full": true,
-    "approved": false
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -81.42948914,
      37.88844299
     ]

@@ -48,27 +48,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -81.55780792,
-     37.91078186
-    ]
-   },
-   "properties": {
-    "id": 3,
-    "title": "Twilight Strip Mine",
-    "body_md": "This window needs a link to info about Twilight, not just the MTR intro.",
-    "image": "Failed initial if statement in InfoWindow.class.php",
-    "image_thumb": "",
-    "image_desc": "",
-    "details_link": "",
-    "link_to_full": true,
-    "approved": false
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -81.51325989,
      37.85524368
     ]

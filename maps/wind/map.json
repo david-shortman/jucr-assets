@@ -19,7 +19,7 @@
     },
     {
       "id": "capacity-factor",
-      "label": "capacity_factor",
+      "label": "Wind Logics—capacity factor",
       "file": "layers/capacity-factor.geojson",
       "features": 9033,
       "source_kml": "kml/wind/csWL-CapacityFactor.kmz",
@@ -27,7 +27,7 @@
     },
     {
       "id": "energy-production",
-      "label": "energy_production",
+      "label": "Wind Logics—energy production",
       "file": "layers/energy-production.geojson",
       "features": 12964,
       "source_kml": "kml/wind/csWL-EnergyProduction.kmz",
@@ -35,7 +35,7 @@
     },
     {
       "id": "production",
-      "label": "production",
+      "label": "Wind Logics—production",
       "file": "layers/production.geojson",
       "features": 12964,
       "source_kml": "kml/wind/csWL-Production.kmz",
@@ -43,7 +43,7 @@
     },
     {
       "id": "wind-speed",
-      "label": "wind_speed",
+      "label": "Wind Logics—wind speed",
       "file": "layers/wind-speed.geojson",
       "features": 342,
       "source_kml": "kml/wind/WL-WindSpeed.kml",

@@ -51,7 +51,7 @@
     },
     {
       "id": "blair-permits",
-      "label": "blair_permits",
+      "label": "Strip mine permits near Blair Mountain",
       "file": "layers/blair-permits.geojson",
       "features": 1037,
       "source_kml": "kml/blair/blair-surface.kml",

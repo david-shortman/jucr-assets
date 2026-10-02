@@ -67,7 +67,7 @@
     },
     {
       "id": "auger-mines",
-      "label": "auger_mines",
+      "label": "Auger mines",
       "file": "layers/auger-mines.geojson",
       "features": 100,
       "source_kml": "kml/crm/auger_mines.kml",
@@ -75,7 +75,7 @@
     },
     {
       "id": "cross-section",
-      "label": "cross_section",
+      "label": "Cross section of Brushy Fork Impoundment",
       "file": "layers/cross-section.geojson",
       "features": 1,
       "source_kml": "kml/crm/cross_section.kmz",
@@ -83,7 +83,7 @@
     },
     {
       "id": "underground-mines",
-      "label": "underground_mines",
+      "label": "Underground mines around Brushy Fork Impoundment",
       "file": "layers/underground-mines.geojson",
       "features": 46,
       "source_kml": "kml/crm/underground_mines2.kmz",

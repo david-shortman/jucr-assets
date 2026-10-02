@@ -47,6 +47,9 @@
   }
   function resolveImage(ref, mediaBase) {
     if (!ref || /failed initial if statement/i.test(ref)) return null;
+    // Off-site images (e.g. Flickr) are served from where they live; only the
+    // legacy site's own paths were mirrored into mediaBase.
+    if (/^https?:\/\//.test(ref) && !/^https?:\/\/(www\.)?auroralights\.org\//i.test(ref)) return ref;
     if (mediaBase) {
       var clean = decodeURIComponent(ref.split("?")[0].split("#")[0]);
       var bn = clean.substring(clean.lastIndexOf("/") + 1);
@@ -60,7 +63,8 @@
   var PROFILE_FIELDS = [["vision", "Vision"], ["skills", "Skills"], ["projects", "Projects"], ["resources", "Resources"]];
   function profilePopup(p, mediaBase, articleBase) {
     var html = "<div class='jucr-popup'>";
-    var img = resolveImage(p.image, mediaBase);
+    // Legacy drew a marker image only when img_thumb was set (InfoWindow.class.php).
+    var img = p.image_thumb ? resolveImage(p.image, mediaBase) : null;
     if (img) html += "<img src='" + img + "' alt='" + (p.image_desc || "") + "' onerror=\"this.style.display='none'\">";
     if (p.meta) html += "<p class='jucr-popup-meta'>" + miniMarkdown(p.meta).replace(/^<p>|<\/p>$/g, "") + "</p>";
     PROFILE_FIELDS.forEach(function (f) {
@@ -74,7 +78,8 @@
     var html = "<div class='jucr-popup'>";
     if (p.title) html += "<h3>" + p.title + "</h3>";
     html += miniMarkdown(p.body_md || "");
-    var img = resolveImage(p.image, mediaBase);
+    // Legacy drew a marker image only when img_thumb was set (InfoWindow.class.php).
+    var img = p.image_thumb ? resolveImage(p.image, mediaBase) : null;
     if (img) html += "<img src='" + img + "' alt='" + (p.image_desc || "") + "' onerror=\"this.style.display='none'\">";
     if (p.details_link && p.link_to_full) html += "<p><a href='" + p.details_link + "' target='_blank' rel='noopener'>Read more &rarr;</a></p>";
     return html + "</div>";
@@ -94,12 +99,16 @@
   // Features carry their KML styling as simplestyle properties (fill, stroke,
   // stroke-width, ...); the palette colour is only a fallback for unstyled data.
   function dominantColor(data, fallback) {
-    var n = {};
+    var shapes = {}, points = {};
     (data.features || []).forEach(function (f) {
-      var c = f.properties && (f.properties.fill || f.properties.stroke || f.properties["icon-color"]);
-      if (c) n[c] = (n[c] || 0) + 1;
+      var pr = f.properties || {}, t = (f.geometry && f.geometry.type) || "";
+      // Lines carry shp2kml's unused default PolyStyle too, so take the colour
+      // the geometry actually draws with. Label points never outvote shapes.
+      if (/Polygon/.test(t)) { var c = pr.fill || pr.stroke; if (c) shapes[c] = (shapes[c] || 0) + 1; }
+      else if (/LineString/.test(t)) { if (pr.stroke) shapes[pr.stroke] = (shapes[pr.stroke] || 0) + 1; }
+      else if (pr["icon-color"]) points[pr["icon-color"]] = (points[pr["icon-color"]] || 0) + 1;
     });
-    var best = null;
+    var n = Object.keys(shapes).length ? shapes : points, best = null;
     Object.keys(n).forEach(function (c) { if (!best || n[c] > n[best]) best = c; });
     return best || fallback;
   }

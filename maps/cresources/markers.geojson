@@ -19,7 +19,15 @@
     "image_desc": "Photo by Josh Graupera.",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 8,
+    "meta": "Ed Wiley, Rock Creek",
+    "vision": "Building a healthy community to provide for the future of the children.",
+    "skills": "Carpentry, construction, heavy equipment operating, butchering, Gardening, meat smoking, mechanics, woodworking, animal husbandry, public speaking, hunting",
+    "projects": "Raising awareness about mountaintop removal & economic diversification",
+    "resources": "Woodworking shop, horse, chickens, garden",
+    "article_slug": "cresources-02-children-are-the-future-of-the-coal-rive"
    }
   },
   {
@@ -40,7 +48,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 6,
+    "meta": "Sherry Geisler, Twin Branch Farm, Rock Creek",
+    "vision": "To run a yarn shop and teaching center, have a cooperative garden on my land.",
+    "skills": "Spinning, canning, gardening, crochet/knitting, cheese-making, yogurt making, cooking, baking",
+    "projects": "Homestead, yarn shop, learning center",
+    "resources": "Goats, cabin, farm, bees, house, land, garden, tractor, hay bailer",
+    "article_slug": "cresources-32-sherry-geisler"
    }
   },
   {
@@ -61,7 +77,15 @@
     "image_desc": "Photo by Cheshire Tongkat",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 7,
+    "meta": "Rick Bradford, Edwight",
+    "vision": "To have a bustling community, much like it was in the 1950s.",
+    "skills": "Storytelling, writing, history, photography, gardening, dog raising",
+    "projects": "History and photography of the Coal River Valley",
+    "resources": "Rich knowledge of the local area, garden",
+    "article_slug": "cresources-04-chronicling-the-coal-river-valley-s-coal"
    }
   },
   {
@@ -82,7 +106,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": null,
+    "meta": "Nancy Platt, Whitesville",
+    "vision": "To unify Whitesville and the surrounding area around local crafts and food.",
+    "skills": "Business management, cooking, retail, fundraising, hospitality",
+    "projects": "Boone Raleigh Community Group, Nuttin' Fancy Restaurant and Crafts Shop",
+    "resources": "Kitchen equipment, Nuttin' Fancy Restaurant building",
+    "article_slug": ""
    }
   },
   {
@@ -103,7 +135,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 11,
+    "meta": "Debbie Jarrell, Rock Creek",
+    "vision": "Schools, small businesses, and local agriculture, in a community that is proud of its work",
+    "skills": "Gardening, canning, crocheting, painting, repair, cooking, writing, business, community organizing",
+    "projects": "Coal River Mountain Watch, starting a woodworking & crafts business",
+    "resources": "Horse, chickens, garden, wood working tools, pasture, river, house",
+    "article_slug": "cresources-08-debbie-jarrell"
    }
   },
   {
@@ -124,7 +164,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 19,
+    "meta": "Connie and Terry Dillon, Arnett",
+    "vision": "Connie: Folk school to pass on traditional skills, medical center, seed saving and seed and plant exchanges. Terry: Kids spending time outdoors, lumber store and wood kiln",
+    "skills": "gardening, cooking, canning, apple butter, molasses, mandolin, guitar, bass, teaching, community organizing, woodworking, gardening, hunting, fishing, brickmason, coal mining",
+    "projects": "Seed saving and plant saving in collaboration with Liberty High School",
+    "resources": "Woodworking tools, woodworking shop, garden, family tractor, access to sawmill",
+    "article_slug": "cresources-06-connie-and-terry-dillon"
    }
   },
   {
@@ -145,7 +193,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 27,
+    "meta": "Lonnie Burnside, Rock Creek",
+    "vision": "Parks and a YMCA to serve as a community gathering space for youth and families.",
+    "skills": "Gardening, singing",
+    "projects": "Marsh Fork Community Association",
+    "resources": "Garden, sawmill, house",
+    "article_slug": "cresources-19-lonnie-burnside"
    }
   },
   {
@@ -166,7 +222,15 @@
     "image_desc": "Delbert guides a log through his sawmill. Fall 2009, photo Maureen Farrell.",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 10,
+    "meta": "Delbert & Judy Gunnoe, Rock Creek",
+    "vision": "Deep mining for coal, renewable energy, and tourism supports small businesses in a community where people help one another.",
+    "skills": "Woodworking, construction, roofing, welding, butchering, gardening, hunting, sawmilling, gathering ramps, ginseng and mushrooms, quilting, crocheting, canning, husbandry, veterinarian.",
+    "projects": "Boone Raleigh Community Group, Coal River Wind Project, Community Greenhouse, Wood Kiln.",
+    "resources": "300 acres, fields, barn, garden, dump truck, bulldozer, excavator, track loader, back-hoe, truck, tractor, hay bailer, sawmill, woodworking tools, ATV, hogs, hunting dogs, canning equipment.",
+    "article_slug": "cresources-09-delbert-and-judy-gunnoe"
    }
   },
   {
@@ -187,7 +251,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 26,
+    "meta": "Kendra Dickens, Arnett",
+    "vision": "A recreational youth football league and other community and youth activities to fill the void left by school consolidation.",
+    "skills": "Teaching, nursing, canning, cooking, care taking",
+    "projects": "Marsh Fork Community Association, Community Greenhouse, Community Kitchen",
+    "resources": "Masters degree in Special Needs Education, house",
+    "article_slug": "cresources-18-kendra-dickens"
    }
   },
   {
@@ -208,7 +280,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 12,
+    "meta": "Junior Walk, Whitesville",
+    "vision": "small businesses that keep value in the community and protecting the valley from industrial development",
+    "skills": "Drawing, graphic design, computers, photography, writing, public speaking, gardening, ramp digging",
+    "projects": "Community Greenhouse, Coal River Mountain Watch",
+    "resources": "Comic book collection",
+    "article_slug": "cresources-14-junior-walk"
    }
   },
   {
@@ -229,7 +309,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 13,
+    "meta": "Bill Lucas, Dameron",
+    "vision": "A land-based economy and passing on \"old-timer\" knowledge.",
+    "skills": "Building log cabins, stone-cutting, masonry, chair-caning, basket weaving, woodworking, gardening, repairing “junk,” toy making, plumbing, welding",
+    "projects": "Community greenhouse, log cabin, water-powered grist mill",
+    "resources": "Woodworking tools, grain grinder, garden, log cabin, antique collection",
+    "article_slug": "cresources-03-bill-lucas"
    }
   },
   {
@@ -250,7 +338,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 29,
+    "meta": "Sandy Simmons, Arnett",
+    "vision": "Family-owned businesses and parks providing a hub of community life in the Coal River Valley",
+    "skills": "Good with people, cooking, first aid, nursing, tiling, wall papering",
+    "projects": "Marsh Fork Community Center",
+    "resources": "Home",
+    "article_slug": "cresources-28-sandy-simmons"
    }
   },
   {
@@ -271,7 +367,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 15,
+    "meta": "Clear Fork Couple",
+    "vision": "New industry to complement the coal industry and repopulate the Coal River Valley and support local schools.",
+    "skills": "Man: woodworking, hunting, fishing, four wheeling, senging, gardening\nWoman: painting, quilting, making dolls, gardening, canning",
+    "projects": "",
+    "resources": "Four wheeler, boat, wood shop, tiller, house",
+    "article_slug": "cresources-05-clear-fork-couple"
    }
   },
   {
@@ -292,7 +396,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 22,
+    "meta": "Jimmy Platt, Whitesville",
+    "vision": "Gardening to feed his family and friends",
+    "skills": "Cooking, fishing, hunting, woodworking, boating, gardening",
+    "projects": "Nuttin' Fancy Restaurant",
+    "resources": "Land, weed whackers, commercial kitchen equipment",
+    "article_slug": "cresources-13-jimmy-platt"
    }
   },
   {
@@ -313,7 +425,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 32,
+    "meta": "Wilma Cook, Arnett",
+    "vision": "Self sufficient farms to feed the community and pass on skills for self-sufficiency to the younger generation and visitors.",
+    "skills": "Ginsenging, hunting for molly moochers, gardening, cooking, caring for children",
+    "projects": "",
+    "resources": "House, land",
+    "article_slug": "cresources-33-wilma-cook"
    }
   },
   {
@@ -334,7 +454,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 20,
+    "meta": "Gary and Barb Anderson, Clear Fork",
+    "vision": "Wind farms, wind turbine component manufacturing, room and pillar underground coal mining, natural gas drilling, and timbering provide jobs for a vibrant community. Preserve local culture.",
+    "skills": "Gardening, canning, cooking, welding, soldering, construction, fishing, hunting, public speaking, woodworking, labor organizing",
+    "projects": "Coal River Wind Project, Boone Raleigh Community Group",
+    "resources": "Wood working tools",
+    "article_slug": "cresources-12-gary-and-barb-anderson"
    }
   },
   {
@@ -355,7 +483,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 23,
+    "meta": "Justin Wills, Naoma",
+    "vision": "Learning about career options and bringing more \"things to do\" onto Route 3",
+    "skills": "",
+    "projects": "Cutting grass, high school",
+    "resources": "",
+    "article_slug": "cresources-15-justin-wills"
    }
   },
   {
@@ -376,7 +512,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 24,
+    "meta": "Kathleen Dickens, Arnett",
+    "vision": "More young adults staying in the Coal River Valley.",
+    "skills": "Gardening, canning, cooking, office management, marketing",
+    "projects": "Community kitchen, community greenhouse, Marsh Fork Community Association",
+    "resources": "Greenhouse, gardens, land, river, mechanic's garage, house",
+    "article_slug": "cresources-16-kathleen-dickens"
    }
   },
   {
@@ -397,7 +541,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 25,
+    "meta": "Kay and Danny Howell, Sundial",
+    "vision": "Renewable energy and small businesses creating local jobs. Kay wants to start her own donut shop.",
+    "skills": "Cooking, community organizing, fundraising, tobacco farming, retail, sewing, catering, carpentry, gardening, construction, plumbing, wiring, coal mining, boat-making, \"re-purposing\" old things",
+    "projects": "Marsh Fork Community Association, community greenhouse, community kitchen, solar water heater demonstration",
+    "resources": "horse, woodworking tools, sewing machine, solar water heater, mushroom logs, garden",
+    "article_slug": "cresources-17-kay-and-danny-howell"
    }
   },
   {
@@ -418,7 +570,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 28,
+    "meta": "Rachel Bey, Liberty High School",
+    "vision": "Music store, Hobby Lobby, and parks for kids in Whitesville",
+    "skills": "Guitar, massage, cashier, food service",
+    "projects": "High school",
+    "resources": "",
+    "article_slug": "cresources-26-rachel-bey"
    }
   },
   {
@@ -439,7 +599,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 30,
+    "meta": "Shannon Dickens, Arnett",
+    "vision": "Running five guest cabins, reclaiming mountaintop removal sites with topsoil for orchards, micro-hydro electric power, expansion of local agricultural production, and passing on traditional knowledge.",
+    "skills": "Biology, home repair, construction, vehicle maintenance, gardening, beekeeping, woodworking, GIS, canning",
+    "projects": "Marsh Fork Community Association, Community Greenhouse, Water-Powered Grist Mill, Community Kitchen",
+    "resources": "Woodworking tools, tractor, mechanics garage, gardens, peach trees, apple trees, pear trees, sawmill",
+    "article_slug": "cresources-29-shannon-dickens"
    }
   },
   {
@@ -460,7 +628,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 31,
+    "meta": "Sharon and Ernie Thompson, Horse Creek",
+    "vision": "A small business development center to support new local businesses, like consignment shops, pressure washers, and garages, and create apprenticeships for youth. Clean up the river and build parks.",
+    "skills": "Cooking, woodworking, bookkeeping, landscaping, sewing, canning, heavy equipment operation, mine safety inspection, home construction, landscaping, gardening",
+    "projects": "Community kitchen, family recipes book, excavator business, Horse Creek Community Association",
+    "resources": "Garden, woodworking tools, backhoes, excavator, bulldozer, dump truck, shed, house, land, woods, hunting cabin, 27 acres of land",
+    "article_slug": "cresources-30-sharon-thompson"
    }
   },
   {
@@ -481,7 +657,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 37,
+    "meta": "Danny Cook and Mack, James Creek",
+    "vision": "End mountaintop removal coal mining and use the mountains for recreational tourism.",
+    "skills": "Fixing cars, medical, ambulance driver, heavy equipment operation, hunting, ginseng digging, cemetery preservation, gardening, carpentry, plumbing, mechanical",
+    "projects": "Cemetery Preservation, Community Organizing",
+    "resources": "Mechanic equipment, family history, roots to historic cemeteries, ATV, Jeep, Truck, and lots of tools.",
+    "article_slug": "cresources-07-danny-cook-and-mack-james-creek"
    }
   },
   {
@@ -502,7 +686,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 36,
+    "meta": "Elmer Mays, Horse Creek",
+    "vision": "A furniture factory in the Coal River Valley that uses local timber",
+    "skills": "Timbering, wood working, ginseng hunting, mushroom hunting, ramp digging, gardening, coal mining, junking",
+    "projects": "",
+    "resources": "Land, timber, wood working tools, garden",
+    "article_slug": "cresources-10-elmer-mays-horse-creek"
    }
   },
   {
@@ -523,7 +715,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 33,
+    "meta": "Sheila Walk, Eunice",
+    "vision": "Whitesville bustling with stores, businesses, and bars. Like it was 30 years ago.",
+    "skills": "Canning, hunting ginseng, hunting game, woodworking, automotive repair, gardening, making candles, other crafts, fishing",
+    "projects": "Boone Raleigh Community Group",
+    "resources": "Garden, connections to local education community, tools for car repair",
+    "article_slug": "cresources-31-sheila-and-natasha-walk"
    }
   },
   {
@@ -544,7 +744,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 33,
+    "meta": "Natasha Walk, Eunice",
+    "vision": "More jobs for 16- to 24-year-olds, such as Tudors Biscuit World, and someday sell the produce she grows.",
+    "skills": "Canning, hunting ginseng, hunting game, woodworking, automotive repair, gardening, fishing",
+    "projects": "High School",
+    "resources": "Garden",
+    "article_slug": "cresources-31-sheila-and-natasha-walk"
    }
   },
   {
@@ -565,7 +773,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 34,
+    "meta": "Ray and Lottie Cottrell",
+    "vision": "Ray: an interstate highway and airports on mountaintop removal sites to bring business and tourism to the area. Lottie: A general store, Ben Franklin, and other stores and recreational activities",
+    "skills": "Canning, crocheting, building birdhouses, wood working, making jewelry, automotive repair, gardening",
+    "projects": "",
+    "resources": "Garden, space for automotive repairs",
+    "article_slug": "cresources-27-ray-and-lottie-cottrell"
    }
   },
   {
@@ -586,7 +802,15 @@
     "image_desc": "",
     "details_link": "",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formA",
+    "article_id": 35,
+    "meta": "Frank Mooney, Twilight",
+    "vision": "End mountaintop removal and use his property as an educational center for youth learning to live off of the land.",
+    "skills": "Fixing Houses, Archery, Bow Hunting, Softball Umpire, gardening, gathering non-timber forest products",
+    "projects": "Protecting Twilight",
+    "resources": "Property with mineral and surface rights, two houses, off road jeeps, hunting gear, family, www.mtrstopshere.org",
+    "article_slug": "cresources-11-frankie-mooney"
    }
   },
   {
@@ -607,7 +831,15 @@
     "image_desc": "Blake and Jacob after a hard morning\\'s work cleaning up home base of Tadpole Project.",
     "details_link": "/map_project/theme.php?theme=cresources&article=38",
     "link_to_full": true,
-    "approved": true
+    "approved": true,
+    "form": "formB",
+    "article_id": null,
+    "meta": "Tadpole Project",
+    "vision": "",
+    "skills": "",
+    "projects": "",
+    "resources": "",
+    "article_slug": ""
    }
   }
  ]

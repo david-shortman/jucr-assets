@@ -16,6 +16,38 @@
       "features": 164,
       "source_kml": "kml/wind/turbinelocations.kml",
       "default": true
+    },
+    {
+      "id": "capacity-factor",
+      "label": "capacity_factor",
+      "file": "layers/capacity-factor.geojson",
+      "features": 9033,
+      "source_kml": "kml/wind/csWL-CapacityFactor.kmz",
+      "default": false
+    },
+    {
+      "id": "energy-production",
+      "label": "energy_production",
+      "file": "layers/energy-production.geojson",
+      "features": 12964,
+      "source_kml": "kml/wind/csWL-EnergyProduction.kmz",
+      "default": false
+    },
+    {
+      "id": "production",
+      "label": "production",
+      "file": "layers/production.geojson",
+      "features": 12964,
+      "source_kml": "kml/wind/csWL-Production.kmz",
+      "default": false
+    },
+    {
+      "id": "wind-speed",
+      "label": "wind_speed",
+      "file": "layers/wind-speed.geojson",
+      "features": 342,
+      "source_kml": "kml/wind/WL-WindSpeed.kml",
+      "default": false
     }
   ]
 }

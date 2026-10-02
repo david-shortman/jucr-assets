@@ -7,7 +7,7 @@
   ],
   "zoom": 11,
   "markers": "markers.geojson",
-  "marker_count": 34,
+  "marker_count": 29,
   "layers": [
     {
       "id": "cemeteries",

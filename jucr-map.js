@@ -4,6 +4,10 @@
  *   <div data-jucr-map="https://HOST/maps/hazy/"></div>
  *   <script src="https://HOST/jucr-map.js" defer></script>
  *
+ * Optional: data-media-base (where marker images live), data-article-base
+ * (prefix for article links; default "/articles/", set it to the site's
+ * /articles/ URL when the map is served from another host).
+ *
  * Faithful to the original Google-Maps version: KML data layers show feature
  * names (polygons labeled at centroid; every feature clickable for its
  * name/description), red database "story" markers show full popups, and the
@@ -51,7 +55,22 @@
     if (/^https?:\/\//.test(ref)) return ref;
     return null;
   }
-  function markerPopup(p, mediaBase) {
+  // Community-resource profiles (cresources formA): image, name line, then the
+  // four labelled answers and a "More" link, as InfoWindow.class.php drew them.
+  var PROFILE_FIELDS = [["vision", "Vision"], ["skills", "Skills"], ["projects", "Projects"], ["resources", "Resources"]];
+  function profilePopup(p, mediaBase, articleBase) {
+    var html = "<div class='jucr-popup'>";
+    var img = resolveImage(p.image, mediaBase);
+    if (img) html += "<img src='" + img + "' alt='" + (p.image_desc || "") + "' onerror=\"this.style.display='none'\">";
+    if (p.meta) html += "<p class='jucr-popup-meta'>" + miniMarkdown(p.meta).replace(/^<p>|<\/p>$/g, "") + "</p>";
+    PROFILE_FIELDS.forEach(function (f) {
+      if (p[f[0]]) html += "<p><b>" + f[1] + ": </b>" + miniMarkdown(p[f[0]]).replace(/^<p>|<\/p>$/g, "") + "</p>";
+    });
+    if (p.article_slug) html += "<p><a href='" + articleBase + p.article_slug + "' target='_blank' rel='noopener'>More</a></p>";
+    return html + "</div>";
+  }
+  function markerPopup(p, mediaBase, articleBase) {
+    if (p.form === "formA") return profilePopup(p, mediaBase, articleBase);
     var html = "<div class='jucr-popup'>";
     if (p.title) html += "<h3>" + p.title + "</h3>";
     html += miniMarkdown(p.body_md || "");
@@ -72,22 +91,37 @@
     return (s || "").replace(/[_-]+/g, " ").replace(/\b\w/g, function (c) { return c.toUpperCase(); });
   }
 
+  // Features carry their KML styling as simplestyle properties (fill, stroke,
+  // stroke-width, ...); the palette colour is only a fallback for unstyled data.
+  function dominantColor(data, fallback) {
+    var n = {};
+    (data.features || []).forEach(function (f) {
+      var c = f.properties && (f.properties.fill || f.properties.stroke || f.properties["icon-color"]);
+      if (c) n[c] = (n[c] || 0) + 1;
+    });
+    var best = null;
+    Object.keys(n).forEach(function (c) { if (!best || n[c] > n[best]) best = c; });
+    return best || fallback;
+  }
   function addGeoJSONLayer(map, id, data, color, label, visible) {
     var vis = visible ? "visible" : "none";
     map.addSource(id, { type: "geojson", data: data });
     map.addLayer({ id: id + "-fill", type: "fill", source: id,
       filter: ["==", ["geometry-type"], "Polygon"],
-      paint: { "fill-color": color, "fill-opacity": 0.15 }, layout: { visibility: vis } });
+      paint: { "fill-color": ["coalesce", ["get", "fill"], color],
+        "fill-opacity": ["coalesce", ["get", "fill-opacity"], 0.15] }, layout: { visibility: vis } });
     map.addLayer({ id: id + "-line", type: "line", source: id,
       filter: ["in", ["geometry-type"], ["literal", ["Polygon", "LineString"]]],
-      paint: { "line-color": color, "line-width": 1.8 }, layout: { visibility: vis } });
+      paint: { "line-color": ["coalesce", ["get", "stroke"], color],
+        "line-opacity": ["coalesce", ["get", "stroke-opacity"], 1],
+        "line-width": ["coalesce", ["get", "stroke-width"], 1.8] }, layout: { visibility: vis } });
     map.addLayer({ id: id + "-pt", type: "circle", source: id,
       filter: ["==", ["geometry-type"], "Point"],
-      paint: { "circle-radius": 3.6, "circle-color": color, "circle-opacity": 0.85,
+      paint: { "circle-radius": 3.6, "circle-color": ["coalesce", ["get", "icon-color"], color], "circle-opacity": 0.85,
         "circle-stroke-width": 0.6, "circle-stroke-color": "#fff" }, layout: { visibility: vis } });
     map.addLayer({ id: id + "-label", type: "symbol", source: id,
       filter: ["==", ["geometry-type"], "Polygon"],
-      layout: { "text-field": ["coalesce", ["get", "name"], ["get", "Name"], ""],
+      layout: { "text-field": ["coalesce", ["get", "name"], ["get", "Name"], ""], "text-font": ["Open Sans Semibold"],
         "text-size": 11, "text-allow-overlap": false, "visibility": vis },
       paint: { "text-color": color, "text-halo-color": "#ffffff", "text-halo-width": 1.6 } });
     var ids = [id + "-fill", id + "-line", id + "-pt", id + "-label"];
@@ -115,6 +149,7 @@
     var base = container.getAttribute("data-jucr-map"); if (!base) return;
     if (base.slice(-1) !== "/") base += "/";
     var mediaBase = container.getAttribute("data-media-base") || "";
+    var articleBase = container.getAttribute("data-article-base") || "/articles/";
     container.classList.add("jucr-map-widget");
     container.style.position = "relative";
     container.style.height = container.getAttribute("data-height") || "520px";
@@ -128,7 +163,10 @@
 
     var manifest = await (await fetch(base + "map.json")).json();
     var map = new maplibregl.Map({ container: mapEl,
-      style: { version: 8, sources: { osm: { type: "raster",
+      // Polygon labels are a symbol layer, which MapLibre rejects without a glyph
+      // source; without one the first labelled layer threw and aborted the rest.
+      style: { version: 8, glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+        sources: { osm: { type: "raster",
         tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"], tileSize: 256,
         attribution: "© OpenStreetMap contributors" } },
         layers: [{ id: "osm", type: "raster", source: "osm" }] },
@@ -139,9 +177,9 @@
       for (var i = 0; i < (manifest.layers || []).length; i++) {
         var layer = manifest.layers[i];
         if (!layer.file || layer.features === 0) continue;
-        var color = PALETTE[i % PALETTE.length];
         var on = !!layer.default;
         var gj; try { gj = await (await fetch(base + layer.file)).json(); } catch (e) { continue; }
+        var color = dominantColor(gj, PALETTE[i % PALETTE.length]);
         var ids = addGeoJSONLayer(map, "layer-" + layer.id, gj, color, layer.label || prettyLabel(layer.id), on);
         (function (ids) {
           layersBox.appendChild(makeToggle(layer.label || prettyLabel(layer.id), color, on, function (chk) {
@@ -156,7 +194,7 @@
           map.addLayer({ id: "markers", type: "circle", source: "markers",
             paint: { "circle-radius": 8, "circle-color": MARKER_COLOR, "circle-stroke-width": 2, "circle-stroke-color": "#fff" } });
           map.on("click", "markers", function (e) {
-            new maplibregl.Popup({ maxWidth: "300px" }).setLngLat(e.lngLat).setHTML(markerPopup(e.features[0].properties, mediaBase)).addTo(map);
+            new maplibregl.Popup({ maxWidth: "300px" }).setLngLat(e.lngLat).setHTML(markerPopup(e.features[0].properties, mediaBase, articleBase)).addTo(map);
           });
           map.on("mouseenter", "markers", function () { map.getCanvas().style.cursor = "pointer"; });
           map.on("mouseleave", "markers", function () { map.getCanvas().style.cursor = ""; });

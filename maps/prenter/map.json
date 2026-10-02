@@ -37,8 +37,8 @@
       "id": "prenter-streams",
       "label": "Streams",
       "missing_source": true,
-      "source_kml": "kml/prenter/prenter_streams.kmz",
-      "default": true
+      "default": true,
+      "source_kml": "kml/prenter/prenter_streams.kmz"
     },
     {
       "id": "cemeteries",

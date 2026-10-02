@@ -22,3 +22,4 @@
 .jucr-popup p { margin: 0 0 6px; font-size: 13px; line-height: 1.45; font-family: Georgia, serif; }
 .jucr-popup img { max-width: 100%; height: auto; margin-top: 4px; border-radius: 3px; }
 .jucr-popup a { color: #7a3b2e; }
+.jucr-popup-meta { font-weight: bold; color: #7a3b2e; }

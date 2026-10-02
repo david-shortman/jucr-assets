@@ -7,7 +7,7 @@
   ],
   "zoom": 10,
   "markers": "markers.geojson",
-  "marker_count": 7,
+  "marker_count": 6,
   "layers": [
     {
       "id": "edwight-mining",
@@ -72,6 +72,14 @@
       "features": 145,
       "source_kml": "kml/prenter/valley_fills.kml",
       "default": true
+    },
+    {
+      "id": "watersheds",
+      "label": "Watersheds (sub-basins)",
+      "file": "layers/watersheds.geojson",
+      "features": 20,
+      "source_kml": "kml/watershed/watersheds.kmz",
+      "default": false
     }
   ]
 }

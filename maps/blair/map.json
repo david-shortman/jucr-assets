@@ -15,7 +15,7 @@
       "file": "layers/cemeteries.geojson",
       "features": 234,
       "source_kml": "kml/watershed/cemeteries.kmz",
-      "default": false
+      "default": true
     },
     {
       "id": "blair-fills",
@@ -39,7 +39,7 @@
       "file": "layers/bio-impaired.geojson",
       "features": 366,
       "source_kml": "kml/blair/Blair_bio_impaired.kml",
-      "default": false
+      "default": true
     },
     {
       "id": "blair-streams",
@@ -47,6 +47,14 @@
       "file": "layers/blair-streams.geojson",
       "features": 1992,
       "source_kml": "kml/blair/Blair_streams.kml",
+      "default": true
+    },
+    {
+      "id": "blair-permits",
+      "label": "blair_permits",
+      "file": "layers/blair-permits.geojson",
+      "features": 1037,
+      "source_kml": "kml/blair/blair-surface.kml",
       "default": false
     }
   ]

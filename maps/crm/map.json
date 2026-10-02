@@ -56,6 +56,38 @@
       "features": 1,
       "source_kml": "kml/hazy/marsh_fork_elem.kmz",
       "default": true
+    },
+    {
+      "id": "watersheds",
+      "label": "Watersheds (sub-basins)",
+      "file": "layers/watersheds.geojson",
+      "features": 20,
+      "source_kml": "kml/watershed/watersheds.kmz",
+      "default": false
+    },
+    {
+      "id": "auger-mines",
+      "label": "auger_mines",
+      "file": "layers/auger-mines.geojson",
+      "features": 100,
+      "source_kml": "kml/crm/auger_mines.kml",
+      "default": false
+    },
+    {
+      "id": "cross-section",
+      "label": "cross_section",
+      "file": "layers/cross-section.geojson",
+      "features": 1,
+      "source_kml": "kml/crm/cross_section.kmz",
+      "default": false
+    },
+    {
+      "id": "underground-mines",
+      "label": "underground_mines",
+      "file": "layers/underground-mines.geojson",
+      "features": 46,
+      "source_kml": "kml/crm/underground_mines2.kmz",
+      "default": false
     }
   ]
 }

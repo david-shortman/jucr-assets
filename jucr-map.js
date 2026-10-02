@@ -132,7 +132,8 @@
       filter: ["==", ["geometry-type"], "Polygon"],
       layout: { "text-field": ["coalesce", ["get", "name"], ["get", "Name"], ""], "text-font": ["Open Sans Semibold"],
         "text-size": 11, "text-allow-overlap": false, "visibility": vis },
-      paint: { "text-color": color, "text-halo-color": "#ffffff", "text-halo-width": 1.6 } });
+      // Dark text on a white halo: the layer colour (often yellow) vanished over its own fill.
+      paint: { "text-color": "#1f1f1f", "text-halo-color": "rgba(255,255,255,0.92)", "text-halo-width": 2 } });
     var ids = [id + "-fill", id + "-line", id + "-pt", id + "-label"];
     [id + "-fill", id + "-line", id + "-pt"].forEach(function (lid) {
       map.on("click", lid, function (e) {

@@ -35,11 +35,16 @@
       { ov:'ov-prenter', theme:'prenter', title:'Prenter',
         coords:'214,339,266,339,280,348,306,355,305,364,309,365,314,363,318,359,321,360,321,364,323,367,326,364,327,363,329,364,329,368,333,374,334,381,332,385,329,391,330,395,334,393,337,392,335,398,335,403,335,408,331,411,330,412,330,419,326,422,321,423,314,424,295,423,284,424,253,421,233,416,202,388,200,369' }
     ];
+    // Regions open the theme page on the embedding site, in the top window (legacy theme.php?theme=<slug>).
+    // The site origin comes from the referrer so this keeps working after the domain moves.
+    var SITE = 'https://journey-up-coal-river.webflow.io';
+    try { var ref = document.referrer && new URL(document.referrer).origin; if (ref && ref !== location.origin) SITE = ref; } catch (e) {}
     var svg = document.getElementById('svg'), SVGNS = 'http://www.w3.org/2000/svg';
     function pairs(c){ var n=c.split(','); var out=[]; for(var i=0;i<n.length;i+=2) out.push(n[i]+','+n[i+1]); return out.join(' '); }
     REGIONS.forEach(function(r){
       var a = document.createElementNS(SVGNS,'a');
-      a.setAttribute('href', 'map.html?theme=' + r.theme);
+      a.setAttribute('href', SITE + '/themes/' + r.theme);
+      a.setAttribute('target', '_top');
       var poly = document.createElementNS(SVGNS,'polygon');
       poly.setAttribute('points', pairs(r.coords));
       poly.setAttribute('class','hot');

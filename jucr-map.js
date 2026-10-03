@@ -6,7 +6,10 @@
  *
  * Optional: data-media-base (where marker images live), data-article-base
  * (prefix for article links; default "/articles/", set it to the site's
- * /articles/ URL when the map is served from another host).
+ * /articles/ URL when the map is served from another host), data-bubble-link
+ * (URL prefix; when set, every marker popup ends with a legacy "Link to this
+ * bubble" permalink, prefix + marker id), data-window-id (marker id to open on
+ * load; defaults to the page's ?window_id= query parameter).
  *
  * Faithful to the original Google-Maps version: KML data layers show feature
  * names (polygons labeled at centroid; every feature clickable for its
@@ -61,6 +64,10 @@
   // Community-resource profiles (cresources formA): image, name line, then the
   // four labelled answers and a "More" link, as InfoWindow.class.php drew them.
   var PROFILE_FIELDS = [["vision", "Vision"], ["skills", "Skills"], ["projects", "Projects"], ["resources", "Resources"]];
+  function bubbleLink(p, linkBase) {
+    if (!linkBase || p.id == null) return "";
+    return "<p class='jucr-popup-permalink'><a href='" + linkBase + encodeURIComponent(p.id) + "' target='_blank' rel='noopener'>Link to this bubble</a></p>";
+  }
   function profilePopup(p, mediaBase, articleBase) {
     var html = "<div class='jucr-popup'>";
     // Legacy drew a marker image only when img_thumb was set (InfoWindow.class.php).
@@ -73,7 +80,11 @@
     if (p.article_slug) html += "<p><a href='" + articleBase + p.article_slug + "' target='_blank' rel='noopener'>More</a></p>";
     return html + "</div>";
   }
-  function markerPopup(p, mediaBase, articleBase) {
+  function markerPopup(p, mediaBase, articleBase, linkBase) {
+    var html = markerPopupBody(p, mediaBase, articleBase);
+    return html.replace(/<\/div>$/, bubbleLink(p, linkBase) + "</div>");
+  }
+  function markerPopupBody(p, mediaBase, articleBase) {
     if (p.form === "formA") return profilePopup(p, mediaBase, articleBase);
     var html = "<div class='jucr-popup'>";
     if (p.title) html += "<h3>" + p.title + "</h3>";
@@ -145,12 +156,23 @@
     });
     return ids;
   }
-  function makeToggle(label, color, checked, onChange) {
+  function makeToggle(label, color, checked, onChange, link) {
     var l = document.createElement("label");
     var cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = checked;
     cb.addEventListener("change", function () { onChange(cb.checked); });
     var sw = document.createElement("span"); sw.className = "jucr-swatch"; sw.style.background = color;
-    var tx = document.createElement("span"); tx.textContent = label;
+    var tx = document.createElement("span");
+    // Two legacy legend labels held an inline link (manifest `label_link`);
+    // a click on a link inside a <label> follows it and leaves the box alone.
+    var at = link && link.text && link.href ? label.indexOf(link.text) : -1;
+    if (at < 0) tx.textContent = label;
+    else {
+      var a = document.createElement("a");
+      a.href = link.href; a.target = "_blank"; a.rel = "noopener"; a.textContent = link.text;
+      if (link.title) a.title = link.title;
+      tx.appendChild(document.createTextNode(label.slice(0, at))); tx.appendChild(a);
+      tx.appendChild(document.createTextNode(label.slice(at + link.text.length)));
+    }
     l.appendChild(cb); l.appendChild(sw); l.appendChild(tx);
     return l;
   }
@@ -160,6 +182,10 @@
     if (base.slice(-1) !== "/") base += "/";
     var mediaBase = container.getAttribute("data-media-base") || "";
     var articleBase = container.getAttribute("data-article-base") || "/articles/";
+    var linkBase = container.getAttribute("data-bubble-link") || "";
+    // Legacy deep links: gmaps.php?gmap=<theme>&...&window_id=<marker id> (Q-A4CR101-1).
+    var openId = container.getAttribute("data-window-id");
+    if (openId == null) { try { openId = new URLSearchParams(location.search).get("window_id"); } catch (e) { openId = null; } }
     container.classList.add("jucr-map-widget");
     container.style.position = "relative";
     container.style.height = container.getAttribute("data-height") || "520px";
@@ -169,7 +195,11 @@
     var layersBox = document.createElement("div"); layersBox.className = "jucr-layers"; panel.appendChild(layersBox);
     var note = document.createElement("div"); note.className = "jucr-note";
     note.innerHTML = "Toggle layers above. Click a <strong>marker</strong> or any shape for details.";
-    panel.appendChild(note); container.appendChild(panel);
+    panel.appendChild(note);
+    // Production gmaps.php's second map credit (D37a): the data-currency caveat.
+    var credit = document.createElement("div"); credit.className = "jucr-credit";
+    credit.textContent = "We endeavor to keep these maps up-to-date, but they will not always be as recent as primary sources.";
+    panel.appendChild(credit); container.appendChild(panel);
 
     var manifest = await (await fetch(base + "map.json")).json();
     var map = new maplibregl.Map({ container: mapEl,
@@ -194,7 +224,7 @@
         (function (ids) {
           layersBox.appendChild(makeToggle(layer.label || prettyLabel(layer.id), color, on, function (chk) {
             ids.forEach(function (lid) { if (map.getLayer(lid)) map.setLayoutProperty(lid, "visibility", chk ? "visible" : "none"); });
-          }));
+          }, layer.label_link));
         })(ids);
       }
       if (manifest.markers) {
@@ -204,8 +234,19 @@
           map.addLayer({ id: "markers", type: "circle", source: "markers",
             paint: { "circle-radius": 8, "circle-color": MARKER_COLOR, "circle-stroke-width": 2, "circle-stroke-color": "#fff" } });
           map.on("click", "markers", function (e) {
-            new maplibregl.Popup({ maxWidth: "300px" }).setLngLat(e.lngLat).setHTML(markerPopup(e.features[0].properties, mediaBase, articleBase)).addTo(map);
+            new maplibregl.Popup({ maxWidth: "300px" }).setLngLat(e.lngLat).setHTML(markerPopup(e.features[0].properties, mediaBase, articleBase, linkBase)).addTo(map);
           });
+          // window_id: open that marker's popup at load, anchored to the marker's
+          // own coordinates (production v3 anchored to a position-less object and
+          // never showed it, D26). The click handler above stays bound.
+          if (openId != null && openId !== "") {
+            var hit = markers.features.filter(function (f) { return String(f.properties.id) === String(openId); })[0];
+            if (hit && hit.geometry && hit.geometry.coordinates) {
+              map.jumpTo({ center: hit.geometry.coordinates });
+              new maplibregl.Popup({ maxWidth: "300px" }).setLngLat(hit.geometry.coordinates)
+                .setHTML(markerPopup(hit.properties, mediaBase, articleBase, linkBase)).addTo(map);
+            }
+          }
           map.on("mouseenter", "markers", function () { map.getCanvas().style.cursor = "pointer"; });
           map.on("mouseleave", "markers", function () { map.getCanvas().style.cursor = ""; });
           layersBox.insertBefore(makeToggle("Story markers", MARKER_COLOR, true, function (chk) {

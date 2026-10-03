@@ -23,3 +23,7 @@
 .jucr-popup img { max-width: 100%; height: auto; margin-top: 4px; border-radius: 3px; }
 .jucr-popup a { color: #7a3b2e; }
 .jucr-popup-meta { font-weight: bold; color: #7a3b2e; }
+.jucr-map-widget .jucr-credit { padding: 7px 10px; border-top: 1px solid #ccc;
+  color: #555; font-size: 11px; font-style: italic; }
+.jucr-map-widget .jucr-layers label a { color: #7a3b2e; }
+.jucr-popup-permalink { font-size: 12px !important; }

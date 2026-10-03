@@ -40,6 +40,9 @@
     d.setAttribute('data-media-base', 'media');
     d.setAttribute('data-article-base', 'https://journey-up-coal-river.webflow.io/articles/');
     d.setAttribute('data-height', '100%');
+    // "Link to this bubble" permalinks: this page, this theme, ?window_id=<marker id>.
+    // jucr-map.js reads window_id from this page's query string on load.
+    d.setAttribute('data-bubble-link', location.origin + location.pathname + '?theme=' + theme + '&window_id=');
     document.getElementById('map-host').appendChild(d);
   </script>
   <script src="jucr-map.js" defer></script>

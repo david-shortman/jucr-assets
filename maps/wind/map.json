@@ -1,0 +1,53 @@
+{
+  "slug": "wind",
+  "center_title": "Coal River Mountain, W.Va.",
+  "center": [
+    -81.423512,
+    37.903926
+  ],
+  "zoom": 12,
+  "markers": "markers.geojson",
+  "marker_count": 1,
+  "layers": [
+    {
+      "id": "proposed-turbines",
+      "label": "Proposed turbines locations",
+      "file": "layers/proposed-turbines.geojson",
+      "features": 164,
+      "source_kml": "kml/wind/turbinelocations.kml",
+      "default": true
+    },
+    {
+      "id": "capacity-factor",
+      "label": "Wind Logics—capacity factor",
+      "file": "layers/capacity-factor.geojson",
+      "features": 9033,
+      "source_kml": "kml/wind/csWL-CapacityFactor.kmz",
+      "default": false
+    },
+    {
+      "id": "energy-production",
+      "label": "Wind Logics—energy production",
+      "file": "layers/energy-production.geojson",
+      "features": 12964,
+      "source_kml": "kml/wind/csWL-EnergyProduction.kmz",
+      "default": false
+    },
+    {
+      "id": "production",
+      "label": "Wind Logics—production",
+      "file": "layers/production.geojson",
+      "features": 12964,
+      "source_kml": "kml/wind/csWL-Production.kmz",
+      "default": false
+    },
+    {
+      "id": "wind-speed",
+      "label": "Wind Logics—wind speed",
+      "file": "layers/wind-speed.geojson",
+      "features": 342,
+      "source_kml": "kml/wind/WL-WindSpeed.kml",
+      "default": false
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "blair",
+  "center_title": "Blair Mountain, W.Va.",
+  "center": [
+    -81.826,
+    37.866994
+  ],
+  "zoom": 11,
+  "markers": "markers.geojson",
+  "marker_count": 0,
+  "layers": [
+    {
+      "id": "cemeteries",
+      "label": "Cemeteries",
+      "file": "layers/cemeteries.geojson",
+      "features": 234,
+      "source_kml": "kml/watershed/cemeteries.kmz",
+      "default": true
+    },
+    {
+      "id": "blair-fills",
+      "label": "Valley Fills",
+      "file": "layers/blair-fills.geojson",
+      "features": 243,
+      "source_kml": "kml/blair/Blair_Area_Fills.kml",
+      "default": true
+    },
+    {
+      "id": "battlefield",
+      "label": "Blair Mountain Battlefield designation, 1921",
+      "file": "layers/battlefield.geojson",
+      "features": 2,
+      "source_kml": "kml/blair/Blair_Battle.kml",
+      "default": true
+    },
+    {
+      "id": "bio-impaired",
+      "label": "Bio-impaired, see WV Stream Condition Index",
+      "file": "layers/bio-impaired.geojson",
+      "features": 366,
+      "source_kml": "kml/blair/Blair_bio_impaired.kml",
+      "default": true,
+      "label_link": {
+        "text": "WV Stream Condition Index",
+        "href": "http://www.dep.wv.gov/WWE/watershed/bio_fish/Pages/Bio_Fish.aspx",
+        "title": "West Virginia Stream Condition Index, WV Dept. of Environmental Protection"
+      }
+    },
+    {
+      "id": "blair-streams",
+      "label": "Streams around Blair Mountain",
+      "file": "layers/blair-streams.geojson",
+      "features": 1992,
+      "source_kml": "kml/blair/Blair_streams.kml",
+      "default": true
+    },
+    {
+      "id": "blair-permits",
+      "label": "Strip mine permits near Blair Mountain",
+      "file": "layers/blair-permits.geojson",
+      "features": 1037,
+      "source_kml": "kml/blair/blair-surface.kml",
+      "default": false
+    }
+  ]
+}

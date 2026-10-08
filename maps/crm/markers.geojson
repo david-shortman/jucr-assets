@@ -17,7 +17,7 @@
     "image": "Failed initial if statement in InfoWindow.class.php",
     "image_thumb": "",
     "image_desc": "",
-    "details_link": "http://auroralights.org/map_project/theme.php?theme=hazy&article=primary",
+    "details_link": "/articles/hazy-01-near-the-mouth-of-hazy",
     "link_to_full": true,
     "approved": true
    }
@@ -38,7 +38,7 @@
     "image": "http://auroralights.org/userfiles/burningtrees_small%20copy.jpg",
     "image_thumb": "http://auroralights.org/userfiles/burningtrees_small%20copy.jpg",
     "image_desc": "",
-    "details_link": "http://auroralights.org/map_project/theme.php?theme=crm&article=5#dry_creek_timbering",
+    "details_link": "/articles/crm-04-forest-resources-and-timbering#dry_creek_timbering",
     "link_to_full": true,
     "approved": true
    }
@@ -55,7 +55,7 @@
    "properties": {
     "id": 10,
     "title": "Video Interviews with Rock Creek residents",
-    "body_md": "Hear them speak about the Coal River Wind Project:\n\n[Lorelei Scarboro](http://auroralights.org/map_project/theme.php?theme=wind&article=primary#lorelei)\n\n[Sherry Geisler](http://auroralights.org/map_project/theme.php?theme=wind&article=primary#sherry)",
+    "body_md": "Hear them speak about the Coal River Wind Project:\n\n[Lorelei Scarboro](/articles/wind-01-introduction-to-coal-river-wind#lorelei)\n\n[Sherry Geisler](/articles/wind-01-introduction-to-coal-river-wind#sherry)",
     "image": "Failed initial if statement in InfoWindow.class.php",
     "image_thumb": "",
     "image_desc": "",
@@ -80,7 +80,7 @@
     "image": "Failed initial if statement in InfoWindow.class.php",
     "image_thumb": "",
     "image_desc": "",
-    "details_link": "http://auroralights.org/map_project/theme.php?theme=wind&article=primary#wind_intro",
+    "details_link": "/articles/wind-01-introduction-to-coal-river-wind#wind_intro",
     "link_to_full": true,
     "approved": true
    }
@@ -101,7 +101,7 @@
     "image": "Failed initial if statement in InfoWindow.class.php",
     "image_thumb": "",
     "image_desc": "",
-    "details_link": "http://auroralights.org/map_project/theme.php?theme=wind&article=primary#wind_videos",
+    "details_link": "/articles/wind-01-introduction-to-coal-river-wind#wind_videos",
     "link_to_full": true,
     "approved": true
    }
@@ -122,7 +122,7 @@
     "image": "http://auroralights.org/userfiles/Colcord_flood(1).jpg",
     "image_thumb": "http://auroralights.org/userfiles/Colcord_flood(1)_thumb.jpg",
     "image_desc": "",
-    "details_link": "http://auroralights.org/map_project/theme.php?theme=wind&article=6#flooding_and_blasting",
+    "details_link": "/articles/wind-02-the-threat-of-mtr-on-coal-river-mountain#flooding_and_blasting",
     "link_to_full": true,
     "approved": true
    }
@@ -143,7 +143,7 @@
     "image": "Failed initial if statement in InfoWindow.class.php",
     "image_thumb": "",
     "image_desc": "",
-    "details_link": "http://auroralights.org/map_project/theme.php?theme=coal_river_101&article=8#outmigration",
+    "details_link": "/articles/coal_river_101-05-outmigration#outmigration",
     "link_to_full": true,
     "approved": true
    }

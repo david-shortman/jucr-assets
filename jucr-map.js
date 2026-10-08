@@ -40,10 +40,16 @@
     return loadOnce("link", { rel: "stylesheet", href: MAPLIBRE_CSS })
       .then(function () { return loadOnce("script", { src: MAPLIBRE_JS }); });
   }
-  function miniMarkdown(md) {
+  // Marker links into the site are root-relative (/articles/...); they resolve
+  // against the site that embeds the map (articleBase), not the map's own host.
+  function siteHref(h, base) {
+    if (!/^\/(?!\/)/.test(h) || !base) return h;
+    try { return new URL(h, base).href; } catch (e) { return h; }
+  }
+  function miniMarkdown(md, base) {
     if (!md) return "";
     var html = md.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/\[([^\]]+)\]\(([^)\s]+)[^)]*\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+      .replace(/\[([^\]]+)\]\(([^)\s]+)[^)]*\)/g, function (m, t, h) { return '<a href="' + siteHref(h, base) + '" target="_blank" rel="noopener">' + t + "</a>"; })
       .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
       .replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>");
     return html.split(/\n{2,}/).map(function (p) { return "<p>" + p.replace(/\n/g, "<br>") + "</p>"; }).join("");
@@ -73,9 +79,9 @@
     // Legacy drew a marker image only when img_thumb was set (InfoWindow.class.php).
     var img = p.image_thumb ? resolveImage(p.image, mediaBase) : null;
     if (img) html += "<img src='" + img + "' alt='" + (p.image_desc || "") + "' onerror=\"this.style.display='none'\">";
-    if (p.meta) html += "<p class='jucr-popup-meta'>" + miniMarkdown(p.meta).replace(/^<p>|<\/p>$/g, "") + "</p>";
+    if (p.meta) html += "<p class='jucr-popup-meta'>" + miniMarkdown(p.meta, articleBase).replace(/^<p>|<\/p>$/g, "") + "</p>";
     PROFILE_FIELDS.forEach(function (f) {
-      if (p[f[0]]) html += "<p><b>" + f[1] + ": </b>" + miniMarkdown(p[f[0]]).replace(/^<p>|<\/p>$/g, "") + "</p>";
+      if (p[f[0]]) html += "<p><b>" + f[1] + ": </b>" + miniMarkdown(p[f[0]], articleBase).replace(/^<p>|<\/p>$/g, "") + "</p>";
     });
     if (p.article_slug) html += "<p><a href='" + articleBase + p.article_slug + "' target='_blank' rel='noopener'>More</a></p>";
     return html + "</div>";
@@ -88,19 +94,19 @@
     if (p.form === "formA") return profilePopup(p, mediaBase, articleBase);
     var html = "<div class='jucr-popup'>";
     if (p.title) html += "<h3>" + p.title + "</h3>";
-    html += miniMarkdown(p.body_md || "");
+    html += miniMarkdown(p.body_md || "", articleBase);
     // Legacy drew a marker image only when img_thumb was set (InfoWindow.class.php).
     var img = p.image_thumb ? resolveImage(p.image, mediaBase) : null;
     if (img) html += "<img src='" + img + "' alt='" + (p.image_desc || "") + "' onerror=\"this.style.display='none'\">";
-    if (p.details_link && p.link_to_full) html += "<p><a href='" + p.details_link + "' target='_blank' rel='noopener'>Read more &rarr;</a></p>";
+    if (p.details_link && p.link_to_full) html += "<p><a href='" + siteHref(p.details_link, articleBase) + "' target='_blank' rel='noopener'>Read more &rarr;</a></p>";
     return html + "</div>";
   }
-  function featurePopup(props, layerLabel) {
+  function featurePopup(props, layerLabel, base) {
     var name = props && (props.name || props.Name);
     var desc = props && props.description;
     var html = "<div class='jucr-popup'><div class='jucr-popup-layer'>" + layerLabel + "</div>";
     if (name) html += "<h3>" + name + "</h3>";
-    if (desc && !/^exported from/i.test(desc)) html += "<p>" + desc + "</p>";
+    if (desc && !/^exported from/i.test(desc)) html += "<p>" + desc.replace(/(href=["'])([^"']+)/g, function (m, a, h) { return a + siteHref(h, base); }) + "</p>";
     return html + "</div>";
   }
   function prettyLabel(s) {
@@ -123,8 +129,19 @@
     Object.keys(n).forEach(function (c) { if (!best || n[c] > n[best]) best = c; });
     return best || fallback;
   }
-  function addGeoJSONLayer(map, id, data, color, label, visible, popupFor) {
+  function addGeoJSONLayer(map, id, data, color, label, visible, popupFor, articleBase) {
     var vis = visible ? "visible" : "none";
+    // Bounding-box size per shape, so a click picks the most specific feature
+    // rather than a buffer or radius drawn over everything (0 for points/lines).
+    (data.features || []).forEach(function (f) {
+      var g = f.geometry, x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+      if (!g || !/Polygon/.test(g.type)) return;
+      (function walk(c) {
+        if (typeof c[0] === "number") { x0 = Math.min(x0, c[0]); x1 = Math.max(x1, c[0]); y0 = Math.min(y0, c[1]); y1 = Math.max(y1, c[1]); }
+        else c.forEach(walk);
+      })(g.coordinates);
+      f.properties = f.properties || {}; f.properties._extent = (x1 - x0) * (y1 - y0);
+    });
     map.addSource(id, { type: "geojson", data: data });
     map.addLayer({ id: id + "-fill", type: "fill", source: id,
       filter: ["==", ["geometry-type"], "Polygon"],
@@ -147,7 +164,7 @@
       paint: { "text-color": "#1f1f1f", "text-halo-color": "rgba(255,255,255,0.92)", "text-halo-width": 2 } });
     var ids = [id + "-fill", id + "-line", id + "-pt", id + "-label"];
     [id + "-fill", id + "-line", id + "-pt"].forEach(function (lid) {
-      popupFor[lid] = function (f) { return { html: featurePopup(f.properties, label), maxWidth: "260px" }; };
+      popupFor[lid] = function (f) { return { html: featurePopup(f.properties, label, articleBase), maxWidth: "260px" }; };
       map.on("mouseenter", lid, function () { map.getCanvas().style.cursor = "pointer"; });
       map.on("mouseleave", lid, function () { map.getCanvas().style.cursor = ""; });
     });
@@ -211,7 +228,8 @@
     map.addControl(new maplibregl.NavigationControl(), "top-left");
     // One click opens one popup, as the legacy map's single info window did
     // (A4-hazy-G4): the story marker if one is under the cursor, otherwise the
-    // topmost shape. Per-layer handlers each opened their own, stacking 3-4.
+    // most specific feature (points and lines, then the smallest shape; ties go
+    // to the topmost). Per-layer handlers each opened their own, stacking 3-4.
     var popupFor = {}, popup = null;
     function openPopup(lngLat, html, maxWidth) {
       if (popup) popup.remove();
@@ -221,7 +239,8 @@
       var ids = Object.keys(popupFor).filter(function (lid) { return map.getLayer(lid); });
       if (!ids.length) return;
       var hits = map.queryRenderedFeatures(e.point, { layers: ids });
-      var hit = hits.filter(function (f) { return f.layer.id === "markers"; })[0] || hits[0];
+      var size = function (f) { return f.layer.id === "markers" ? -1 : (f.properties._extent || 0); };
+      var hit = hits.reduce(function (best, f) { return !best || size(f) < size(best) ? f : best; }, null);
       if (!hit) return;
       var p = popupFor[hit.layer.id](hit);
       openPopup(e.lngLat, p.html, p.maxWidth);
@@ -234,7 +253,7 @@
         var on = !!layer.default;
         var gj; try { gj = await (await fetch(base + layer.file)).json(); } catch (e) { continue; }
         var color = dominantColor(gj, PALETTE[i % PALETTE.length]);
-        var ids = addGeoJSONLayer(map, "layer-" + layer.id, gj, color, layer.label || prettyLabel(layer.id), on, popupFor);
+        var ids = addGeoJSONLayer(map, "layer-" + layer.id, gj, color, layer.label || prettyLabel(layer.id), on, popupFor, articleBase);
         (function (ids) {
           layersBox.appendChild(makeToggle(layer.label || prettyLabel(layer.id), color, on, function (chk) {
             ids.forEach(function (lid) { if (map.getLayer(lid)) map.setLayoutProperty(lid, "visibility", chk ? "visible" : "none"); });

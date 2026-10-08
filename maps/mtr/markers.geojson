@@ -38,7 +38,7 @@
     "image": "Failed initial if statement in InfoWindow.class.php",
     "image_thumb": "",
     "image_desc": "",
-    "details_link": "http://auroralights.org/map_project/theme.php?theme=prenter&article=primary",
+    "details_link": "/articles/prenter-01-prenter-and-surrounding-communities",
     "link_to_full": true,
     "approved": true
    }
@@ -59,7 +59,7 @@
     "image": "Failed initial if statement in InfoWindow.class.php",
     "image_thumb": "",
     "image_desc": "",
-    "details_link": "http://auroralights.org/map_project/theme.php?theme=hazy&article=primary",
+    "details_link": "/articles/hazy-01-near-the-mouth-of-hazy",
     "link_to_full": true,
     "approved": true
    }
@@ -76,11 +76,11 @@
    "properties": {
     "id": 5,
     "title": "Coal River Mountain",
-    "body_md": "Massey Energy has began strip mining operations around the [Brushy Fork Sludge Impoundment](http://auroralights.org/map_project/theme.php?theme=crm&article=2) on Coal River Mountain in October 2009.  Massey intends to mine thousands of acres, but they currently have no valley fill permits. (6/24/10)",
+    "body_md": "Massey Energy has began strip mining operations around the [Brushy Fork Sludge Impoundment](/articles/crm-05-the-brushy-fork-slurry-impoundment) on Coal River Mountain in October 2009.  Massey intends to mine thousands of acres, but they currently have no valley fill permits. (6/24/10)",
     "image": "Failed initial if statement in InfoWindow.class.php",
     "image_thumb": "",
     "image_desc": "",
-    "details_link": "http://auroralights.org/map_project/theme.php?theme=crm&article=primary",
+    "details_link": "/articles/crm-01-current-land-use-on-coal-river-mountain",
     "link_to_full": true,
     "approved": true
    }
@@ -101,7 +101,7 @@
     "image": "Failed initial if statement in InfoWindow.class.php",
     "image_thumb": "http://upload.wikimedia.org/wikipedia/en/d/d8/Blair_Mountain_Fighting.jpg",
     "image_desc": "http://upload.wikimedia.org/wikipedia/en/d/d8/Blair_Mountain_Fighting.jpg",
-    "details_link": "http://auroralights.org/map_project/theme.php?theme=coal_river_101&article=7#UMWA_and_the_Coal_Wars",
+    "details_link": "/articles/coal_river_101-02-history-of-coal-river-part-2#UMWA_and_the_Coal_Wars",
     "link_to_full": true,
     "approved": true
    }

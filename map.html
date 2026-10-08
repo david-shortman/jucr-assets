@@ -38,7 +38,14 @@
     var d = document.createElement('div');
     d.setAttribute('data-jucr-map', 'maps/' + theme + '/');
     d.setAttribute('data-media-base', 'media');
-    d.setAttribute('data-article-base', 'https://journey-up-coal-river.webflow.io/articles/');
+    // Article links go to the site that embeds this map (webflow.io now,
+    // journeyupcoalriver.org after launch); opened on its own, the webflow.io site.
+    var site = 'https://journey-up-coal-river.webflow.io';
+    try {
+      var host = (location.ancestorOrigins && location.ancestorOrigins[0]) || new URL(document.referrer).origin;
+      if (/^https?:\/\/((www\.)?journeyupcoalriver\.org|journey-up-coal-river\.webflow\.io)$/.test(host)) site = host;
+    } catch (e) {}
+    d.setAttribute('data-article-base', site + '/articles/');
     d.setAttribute('data-height', '100%');
     // "Link to this bubble" permalinks: this page, this theme, ?window_id=<marker id>.
     // jucr-map.js reads window_id from this page's query string on load.

@@ -123,7 +123,7 @@
     Object.keys(n).forEach(function (c) { if (!best || n[c] > n[best]) best = c; });
     return best || fallback;
   }
-  function addGeoJSONLayer(map, id, data, color, label, visible) {
+  function addGeoJSONLayer(map, id, data, color, label, visible, popupFor) {
     var vis = visible ? "visible" : "none";
     map.addSource(id, { type: "geojson", data: data });
     map.addLayer({ id: id + "-fill", type: "fill", source: id,
@@ -147,10 +147,7 @@
       paint: { "text-color": "#1f1f1f", "text-halo-color": "rgba(255,255,255,0.92)", "text-halo-width": 2 } });
     var ids = [id + "-fill", id + "-line", id + "-pt", id + "-label"];
     [id + "-fill", id + "-line", id + "-pt"].forEach(function (lid) {
-      map.on("click", lid, function (e) {
-        new maplibregl.Popup({ maxWidth: "260px" }).setLngLat(e.lngLat)
-          .setHTML(featurePopup(e.features[0].properties, label)).addTo(map);
-      });
+      popupFor[lid] = function (f) { return { html: featurePopup(f.properties, label), maxWidth: "260px" }; };
       map.on("mouseenter", lid, function () { map.getCanvas().style.cursor = "pointer"; });
       map.on("mouseleave", lid, function () { map.getCanvas().style.cursor = ""; });
     });
@@ -212,6 +209,23 @@
         layers: [{ id: "osm", type: "raster", source: "osm" }] },
       center: manifest.center, zoom: manifest.zoom });
     map.addControl(new maplibregl.NavigationControl(), "top-left");
+    // One click opens one popup, as the legacy map's single info window did
+    // (A4-hazy-G4): the story marker if one is under the cursor, otherwise the
+    // topmost shape. Per-layer handlers each opened their own, stacking 3-4.
+    var popupFor = {}, popup = null;
+    function openPopup(lngLat, html, maxWidth) {
+      if (popup) popup.remove();
+      popup = new maplibregl.Popup({ maxWidth: maxWidth }).setLngLat(lngLat).setHTML(html).addTo(map);
+    }
+    map.on("click", function (e) {
+      var ids = Object.keys(popupFor).filter(function (lid) { return map.getLayer(lid); });
+      if (!ids.length) return;
+      var hits = map.queryRenderedFeatures(e.point, { layers: ids });
+      var hit = hits.filter(function (f) { return f.layer.id === "markers"; })[0] || hits[0];
+      if (!hit) return;
+      var p = popupFor[hit.layer.id](hit);
+      openPopup(e.lngLat, p.html, p.maxWidth);
+    });
 
     map.on("load", async function () {
       for (var i = 0; i < (manifest.layers || []).length; i++) {
@@ -220,7 +234,7 @@
         var on = !!layer.default;
         var gj; try { gj = await (await fetch(base + layer.file)).json(); } catch (e) { continue; }
         var color = dominantColor(gj, PALETTE[i % PALETTE.length]);
-        var ids = addGeoJSONLayer(map, "layer-" + layer.id, gj, color, layer.label || prettyLabel(layer.id), on);
+        var ids = addGeoJSONLayer(map, "layer-" + layer.id, gj, color, layer.label || prettyLabel(layer.id), on, popupFor);
         (function (ids) {
           layersBox.appendChild(makeToggle(layer.label || prettyLabel(layer.id), color, on, function (chk) {
             ids.forEach(function (lid) { if (map.getLayer(lid)) map.setLayoutProperty(lid, "visibility", chk ? "visible" : "none"); });
@@ -233,18 +247,15 @@
           map.addSource("markers", { type: "geojson", data: markers });
           map.addLayer({ id: "markers", type: "circle", source: "markers",
             paint: { "circle-radius": 8, "circle-color": MARKER_COLOR, "circle-stroke-width": 2, "circle-stroke-color": "#fff" } });
-          map.on("click", "markers", function (e) {
-            new maplibregl.Popup({ maxWidth: "300px" }).setLngLat(e.lngLat).setHTML(markerPopup(e.features[0].properties, mediaBase, articleBase, linkBase)).addTo(map);
-          });
+          popupFor.markers = function (f) { return { html: markerPopup(f.properties, mediaBase, articleBase, linkBase), maxWidth: "300px" }; };
           // window_id: open that marker's popup at load, anchored to the marker's
           // own coordinates (production v3 anchored to a position-less object and
-          // never showed it, D26). The click handler above stays bound.
+          // never showed it, D26). The map-level click handler stays bound.
           if (openId != null && openId !== "") {
             var hit = markers.features.filter(function (f) { return String(f.properties.id) === String(openId); })[0];
             if (hit && hit.geometry && hit.geometry.coordinates) {
               map.jumpTo({ center: hit.geometry.coordinates });
-              new maplibregl.Popup({ maxWidth: "300px" }).setLngLat(hit.geometry.coordinates)
-                .setHTML(markerPopup(hit.properties, mediaBase, articleBase, linkBase)).addTo(map);
+              openPopup(hit.geometry.coordinates, markerPopup(hit.properties, mediaBase, articleBase, linkBase), "300px");
             }
           }
           map.on("mouseenter", "markers", function () { map.getCanvas().style.cursor = "pointer"; });

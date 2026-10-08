@@ -225,6 +225,9 @@
         attribution: "© OpenStreetMap contributors" } },
         layers: [{ id: "osm", type: "raster", source: "osm" }] },
       center: manifest.center, zoom: manifest.zoom });
+    // Embedded in a theme page, the iframe can start narrow and widen after
+    // layout; without this the canvas keeps its first size and draws a strip.
+    if (window.ResizeObserver) new ResizeObserver(function () { map.resize(); }).observe(mapEl);
     map.addControl(new maplibregl.NavigationControl(), "top-left");
     // One click opens one popup, as the legacy map's single info window did
     // (A4-hazy-G4): the story marker if one is under the cursor, otherwise the

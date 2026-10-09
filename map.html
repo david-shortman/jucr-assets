@@ -33,6 +33,13 @@
     var params = new URLSearchParams(location.search);
     if (params.get('embed') === '1') document.body.classList.add('embed');
     var theme = (params.get('theme') || 'coal_river_101').replace(/[^a-z0-9_]/gi,'');
+    // Opened on its own (not iframed with embed=1), this page forwards to the map's own page on the site,
+    // keeping a ?window_id= marker link. Old links and pasted bubble permalinks land on the native page.
+    if (params.get('embed') !== '1' && NAMES[theme]) {
+      var wid = params.get('window_id');
+      location.replace('https://www.journeyupcoalriver.org/maps/' + theme.replace(/_/g, '-') +
+        (wid ? '?window_id=' + encodeURIComponent(wid) : ''));
+    }
     document.getElementById('ttl').textContent = NAMES[theme] || 'Map';
     document.title = (NAMES[theme] || 'Map') + ' — Journey Up Coal River';
     var d = document.createElement('div');
